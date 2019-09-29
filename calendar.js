@@ -10,6 +10,10 @@ var dayImageErrorUrl = "./images/sg2global/logo156x88.png"; //change my url if n
  */
 function CalendarInit() {
     var data = jsonData[calendarDate.getMonth() + "" + calendarDate.getFullYear()]; // fetch current month data
+    if (data === undefined) {
+        nextMonth();
+        return;
+    }
 
     var title = document.getElementById("calendar-monthTitle"); // setup the title
     title.innerHTML = monthNames[calendarDate.getMonth()] + " Calendar";
