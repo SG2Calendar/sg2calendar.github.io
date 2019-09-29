@@ -30,8 +30,11 @@ function CalendarInit() {
     for (var i = 0; i < data.days.length; i++) { //create each day
         day = data.days[i];
         calendar.appendChild(CreateDay(day, data));
-        if (day.d >= calendarDate.getDate() && day.d < calendarDate.getDate() + 10)
-            sidebar.appendChild(CreateSidebarDay(day));
+        if (day.d >= calendarDate.getDate() && day.d < calendarDate.getDate() + 10) {
+            var sd = CreateSidebarDay(day);
+            if (sd !== undefined)
+                sidebar.appendChild(sd);
+        }
     }
     nextPrevMonthExists();
 }
@@ -107,6 +110,8 @@ function CreateDay(day, data) {
  * @returns {Day} day html
  */
 function CreateSidebarDay(day) {
+    if (day.n === "")
+        return undefined;
     var li = document.createElement("li");
     li.className = "box24";
     var el = document.createElement("a");
@@ -155,7 +160,12 @@ function previousMonth() {
     } else {
         calendarDate.setMonth(m);
     }
-    calendarDate.setUTCDate(1);
+    var date = new Date();
+    if (date.getMonth === calendarDate.getMonth()) {
+        calendarDate.setUTCDate(date.getUTCDate());
+    } else {
+        calendarDate.setUTCDate(1);
+    }
     ClearContainers();
     CalendarInit();
 }
@@ -168,7 +178,12 @@ function nextMonth() {
     } else {
         calendarDate.setMonth(m);
     }
-    calendarDate.setUTCDate(1);
+    var date = new Date();
+    if (date.getMonth === calendarDate.getMonth()) {
+        calendarDate.setUTCDate(date.getUTCDate());
+    } else {
+        calendarDate.setUTCDate(1);
+    }
     ClearContainers();
     CalendarInit();
 }
