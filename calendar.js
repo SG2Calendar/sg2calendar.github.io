@@ -155,6 +155,7 @@ function previousMonth() {
     } else {
         calendarDate.setMonth(m);
     }
+    calendarDate.setUTCDate(1);
     ClearContainers();
     CalendarInit();
 }
@@ -167,6 +168,7 @@ function nextMonth() {
     } else {
         calendarDate.setMonth(m);
     }
+    calendarDate.setUTCDate(1);
     ClearContainers();
     CalendarInit();
 }
