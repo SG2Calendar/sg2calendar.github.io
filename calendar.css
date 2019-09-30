@@ -227,6 +227,14 @@
         margin-left: 0px;
     }
 
+/*#calendar #calendar-panel div:nth-child(22) {
+    margin-left: -106.3px;
+}*/
+
+/*#calendar #calendar-panel div:nth-child(29) {
+    margin-left: -106.3px;
+}*/
+
     #calendar #calendar-week div {
         height: 30px;
     }

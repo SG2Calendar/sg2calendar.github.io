@@ -133,7 +133,7 @@ function doubleDay(day, div) {
     var eventName = helper[2];
     var img = div.getElementsByTagName("img")[0];
     var names = ["Moonlight Box", "Budokan PvP"];
-    var pics = ["https://i.imgur.com/zGm6lA5.png", "https://i.imgur.com/hdgCOcG.jpg?"];
+    var pics = ["https://i.imgur.com/zGm6lA5.png", "https://i.imgur.com/IllUyVq.png?"];
     var times = ["All Day", "19:00"];
     var img2 = document.createElement("img");
     img2.src = pics[1];
