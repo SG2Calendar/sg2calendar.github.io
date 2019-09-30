@@ -102,11 +102,13 @@ function CreateDay(day, data) {
         if (helper !== undefined) {
             doubleDay(helper, div, data.som);
         } else {
-            var img = document.createElement("img");
-            img.src = day.u;
-            img.width = "1px";
-            img.height = "1px";
-            document.getElementById("hiddenContainer").appendChild(img);
+            if (day.u != undefined) {
+                var img = document.createElement("img");
+                img.src = day.u;
+                img.width = "1px";
+                img.height = "1px";
+                document.getElementById("hiddenContainer").appendChild(img);
+            }
             div.addEventListener("mouseenter", function () {
                 document.getElementById("calendar-hero-img").src = day.u;
                 title.className = "hidden";
