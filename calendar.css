@@ -103,7 +103,7 @@
         #calendar #calendar-hero #calendar-monthTitle {
             text-align: center;
             position: absolute;
-            top: 10%;
+            bottom: 10%;
             left: 5%;
             color: darkslateblue;
             text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px aqua, 0 0 30px aqua, 0 0 40px aqua, 0 0 55px aqua, 0 0 75px aqua;
