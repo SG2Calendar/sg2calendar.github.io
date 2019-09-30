@@ -108,17 +108,16 @@ function CreateDay(day, data) {
                 img.width = "1px";
                 img.height = "1px";
                 document.getElementById("hiddenContainer").appendChild(img);
+                div.addEventListener("mouseenter", function () {
+                    document.getElementById("calendar-hero-img").src = day.u;
+                    title.className = "hidden";
+                });
+
+                div.addEventListener("mouseleave", function () {
+                    document.getElementById("calendar-hero-img").src = data.som; //screen of the month
+                    title.className = "";
+                });
             }
-            div.addEventListener("mouseenter", function () {
-                document.getElementById("calendar-hero-img").src = day.u;
-                title.className = "hidden";
-            });
-
-            div.addEventListener("mouseleave", function () {
-                document.getElementById("calendar-hero-img").src = data.som; //screen of the month
-                title.className = "";
-            });
-
             div.addEventListener("click", function () { //adds on click event
                 if (day.g !== "")
                     window.open(day.g, '_blank'); //goes to given forum link
