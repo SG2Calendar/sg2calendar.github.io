@@ -76,8 +76,6 @@ function CreateDay(day, data) {
     div.appendChild(el);
 
     if (day.d !== 0) { //no need to append text on empty days
-        
-
         el = document.createElement("span"); //create the day number
         el.innerHTML = day.d; //day number
         div.appendChild(el);
@@ -98,7 +96,6 @@ function CreateDay(day, data) {
             doubleDay(day, div, data.som);
         } else {
             div.addEventListener("mouseenter", function () {
-                console.log(loopInc);
                 document.getElementById("calendar-hero-img").src = day.u;
                 title.className = "hidden";
             });
@@ -152,9 +149,7 @@ function doubleDay(day, div, som) {
     var img2 = document.createElement("img");
     img = document.createElement("img");
     img.src = pics[0];
-    div.appendChild(img);
     img2.src = pics[1];
-    img2.className = "hidden";
     div.appendChild(img2);
 
     setInterval(function () {
