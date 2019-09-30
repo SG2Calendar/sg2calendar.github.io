@@ -196,7 +196,7 @@
         line-height: 15px;
     }
 
-    #calendar #calendar-panel .day img {
+    .flip img {
         -webkit-transform: scaleX(-1);
         -moz-transform: scaleX(-1);
         -o-transform: scaleX(-1);
