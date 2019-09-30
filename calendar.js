@@ -103,7 +103,7 @@ function CreateDay(day, data) {
             document.getElementById("calendar-hero-img").src = data.som; //screen of the month
             title.className = "";
         });
-        if (day.n === "OX Event")
+        if (day.n === "OX Event" || day.n === "Mining Party")
             div.classList.add("flip");
         if (day.d == 26) {
             
