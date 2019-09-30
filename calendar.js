@@ -4,18 +4,30 @@
 
 var calendarDate = new Date();
 var dayImageErrorUrl = "./images/sg2global/logo156x88.png"; //change my url if needed
+var hovering = false;
+
+
 
 /**
  * Manages the calendar data
  */
 function CalendarInit() {
+
+    //var img = [document.getElementById("imgff"), document.getElementById("img2")];
+    //console.log(document.getElementById("imgggg"));
+    //setInterval(function () {
+    //    img[0].toogleClass('hidden');
+    //    img[1].toogleClass('hidden');
+    //    s.innerHtml += 1;
+    //}, 1000);
+
     var data = jsonData[calendarDate.getMonth() + "" + calendarDate.getFullYear()]; // fetch current month data
     if (data === undefined) {
         nextMonth();
         return;
     }
 
-    var title = document.getElementById("calendar-monthTitle"); // setup the title
+    title = document.getElementById("calendar-monthTitle"); // setup the title
     title.innerHTML = monthNames[calendarDate.getMonth()] + " Calendar";
     title.style.color = "#" + data.tc;
     var textShadow = "0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px aqua, 0 0 30px aqua, 0 0 40px aqua, 0 0 55px aqua, 0 0 75px aqua";
@@ -82,14 +94,62 @@ function CreateDay(day, data) {
         div.appendChild(el);
 
         div.addEventListener("mouseenter", function () {
-            document.getElementById("calendar-hero-img").src = div.getElementsByTagName("img")[0].src;
+            document.getElementById("calendar-hero-img").src = day.u;
+            title.className = "hidden";
         });
 
         div.addEventListener("mouseleave", function () {
             document.getElementById("calendar-hero-img").src = data.som; //screen of the month
+            title.className = "";
         });
+        if (day.d == 26) {
+            doubleDay(day, div);
+        }
     }
     return div;
+}
+
+function doubleDay(day, div) {
+    div.addEventListener("mouseover", function () {
+        hovering = true;
+    });
+    div.addEventListener("mouseover", function () {
+        hovering = false;
+    });
+    var helper = div.getElementsByTagName("span");
+    var eventTime = helper[1];
+    var eventName = helper[2];
+    var img = div.getElementsByTagName("img")[0];
+    var names = ["Moonlight Treasure Box", "Budokan PvP"];
+    var pics = ["https://i.imgur.com/qviJbdt.jpg?", "https://i.imgur.com/hdgCOcG.jpg?"];
+    var times = ["All Day", "19:00"];
+    var i = 0;
+    var img2 = document.createElement("img");
+    img2.src = pics[1];
+    img2.className = "hidden";
+    div.appendChild(img2);
+
+    setInterval(function () {
+        if (!hovering) {
+            if (i == 0) {
+                img.className = "";
+                img2.className = "hidden";
+                div.insertBefore(img, div.firstChild);
+                div.removeChild(img2);
+            } else {
+                img.className = "hidden";
+                img2.className = "";
+                div.insertBefore(img2, div.firstChild);
+                div.removeChild(img);
+            }
+            eventTime.innerHTML = times[i];
+            eventName.innerHTML = names[i];
+            i = i + 1;
+            if (i == pics.length) {
+                i = 0;
+            }
+        }
+    }, 1000);
 }
 
 
