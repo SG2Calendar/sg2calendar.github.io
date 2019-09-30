@@ -64,6 +64,12 @@ function CalendarInit() {
  * @returns {Day} day html
  */
 function CreateDay(day, data) {
+    var helper;
+    if (day.e !== undefined) {
+        helper = day;
+        day = day.e[0];
+        day.d = helper.d;
+    }
     var div = document.createElement("div"); //create day container
     div.className = "day calendar-container border";
 
@@ -92,9 +98,15 @@ function CreateDay(day, data) {
         
         if (day.n === "OX Event" || day.n === "Mining Party")
             div.classList.add("flip");
-        if (day.d == 26) {
-            doubleDay(day, div, data.som);
+
+        if (helper !== undefined) {
+            doubleDay(helper, div, data.som);
         } else {
+            var img = document.createElement("img");
+            img.src = day.u;
+            img.width = "1px";
+            img.height = "1px";
+            document.getElementById("hiddenContainer").appendChild(img);
             div.addEventListener("mouseenter", function () {
                 document.getElementById("calendar-hero-img").src = day.u;
                 title.className = "hidden";
@@ -114,6 +126,69 @@ function CreateDay(day, data) {
     return div;
 }
 
+
+function doubleDay(day, div, som) {
+    div.addEventListener("mouseenter", function () {
+        hovering = true;
+        if (loopInc == 1) {
+            document.getElementById("calendar-hero-img").src = "https://i.imgur.com/jSB6MuY.png";
+        } else {
+            document.getElementById("calendar-hero-img").src = img2.src;
+        }
+        title.className = "hidden";
+    });
+    div.addEventListener("mouseleave", function () {
+        hovering = false;
+        document.getElementById("calendar-hero-img").src = som; //screen of the month
+        title.className = "";
+    });
+    div.addEventListener("click", function () { //adds on click event
+        if (loopInc == 1) {
+            window.open("https://www.sg2global.com/forum/index.php?thread/367-event-moonlight-treasure-box/", '_blank'); //goes to given forum link
+        } else {
+            //window.open("", '_blank'); //goes to given forum link
+        }
+    });
+    var helper = div.getElementsByTagName("span");
+    var eventTime = helper[1];
+    var eventName = helper[2];
+    var img = div.getElementsByTagName("img")[0];
+    div.removeChild(img);
+
+    var names = ["Moonlight Box", "Budokan PvP"];
+    var pics = ["https://i.imgur.com/zGm6lA5.png", "https://i.imgur.com/IllUyVq.png?"];
+
+    var times = ["All Day", "19:00"];
+    var img2 = document.createElement("img");
+    img = document.createElement("img");
+    img.src = pics[0];
+    img2.src = pics[1];
+    div.appendChild(img2);
+
+    setInterval(function () {
+        if (!hovering) {
+            if (loopInc == 1) {
+                img.className = "hidden";
+                img2.className = "";
+                div.insertBefore(img2, div.firstChild);
+                div.removeChild(img);
+            } else {
+                img.className = "";
+                img2.className = "hidden";
+                div.insertBefore(img, div.firstChild);
+                div.removeChild(img2);
+            }
+            eventTime.innerHTML = times[loopInc];
+            eventName.innerHTML = names[loopInc];
+            loopInc = loopInc + 1;
+            if (loopInc == pics.length) {
+                loopInc = 0;
+            }
+        }
+    }, 1000);
+}
+
+/*
 function doubleDay(day, div, som) {
     div.addEventListener("mouseenter", function () {
         hovering = true;
@@ -173,7 +248,7 @@ function doubleDay(day, div, som) {
             }
         }
     }, 1000);
-}
+} */
 
 
 /**

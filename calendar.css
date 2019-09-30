@@ -99,6 +99,9 @@
         margin-left: 2px;
         margin-right: 4px;
     }
+        #calendar #calendar-hero .day img {
+            transition: opacity 0.3s linear;
+        }
 
         #calendar #calendar-hero #calendar-monthTitle {
             text-align: center;
