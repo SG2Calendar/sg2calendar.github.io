@@ -76,9 +76,7 @@ function CreateDay(day, data) {
     div.appendChild(el);
 
     if (day.d !== 0) { //no need to append text on empty days
-        div.addEventListener("click", function () { //adds on click event
-            window.open(day.g, '_blank'); //goes to given forum link
-        });
+        
 
         el = document.createElement("span"); //create the day number
         el.innerHTML = day.d; //day number
@@ -93,65 +91,84 @@ function CreateDay(day, data) {
         el.innerHTML = day.n; // event time
         el.className = "calendar-event-name";
         div.appendChild(el);
-
-        div.addEventListener("mouseenter", function () {
-            document.getElementById("calendar-hero-img").src = day.u;
-            title.className = "hidden";
-        });
-
-        div.addEventListener("mouseleave", function () {
-            document.getElementById("calendar-hero-img").src = data.som; //screen of the month
-            title.className = "";
-        });
+        
         if (day.n === "OX Event" || day.n === "Mining Party")
             div.classList.add("flip");
         if (day.d == 26) {
-            
-            doubleDay(day, div);
+            doubleDay(day, div, data.som);
+        } else {
+            div.addEventListener("mouseenter", function () {
+                console.log(loopInc);
+                document.getElementById("calendar-hero-img").src = day.u;
+                title.className = "hidden";
+            });
+
+            div.addEventListener("mouseleave", function () {
+                document.getElementById("calendar-hero-img").src = data.som; //screen of the month
+                title.className = "";
+            });
+
+            div.addEventListener("click", function () { //adds on click event
+                if (day.g !== "")
+                    window.open(day.g, '_blank'); //goes to given forum link
+            });
         }
     }
     return div;
 }
 
-function doubleDay(day, div) {
-    div.addEventListener("mouseover", function () {
+function doubleDay(day, div, som) {
+    div.addEventListener("mouseenter", function () {
         hovering = true;
-        if (loopInc == 0) {
-            document.getElementById("calendar-hero-img").src = img.src;
+        if (loopInc == 1) {
+            document.getElementById("calendar-hero-img").src = "https://i.imgur.com/jSB6MuY.png";
         } else {
             document.getElementById("calendar-hero-img").src = img2.src;
         }
         title.className = "hidden";
     });
-    div.addEventListener("mouseout", function () {
+    div.addEventListener("mouseleave", function () {
         hovering = false;
-        document.getElementById("calendar-hero-img").src = data.som; //screen of the month
+        document.getElementById("calendar-hero-img").src = som; //screen of the month
         title.className = "";
+    });
+    div.addEventListener("click", function () { //adds on click event
+        if (loopInc == 1) {
+            window.open("https://www.sg2global.com/forum/index.php?thread/367-event-moonlight-treasure-box/", '_blank'); //goes to given forum link
+        } else {
+            //window.open("", '_blank'); //goes to given forum link
+        }
     });
     var helper = div.getElementsByTagName("span");
     var eventTime = helper[1];
     var eventName = helper[2];
     var img = div.getElementsByTagName("img")[0];
+    div.removeChild(img);
+    
     var names = ["Moonlight Box", "Budokan PvP"];
     var pics = ["https://i.imgur.com/zGm6lA5.png", "https://i.imgur.com/IllUyVq.png?"];
+
     var times = ["All Day", "19:00"];
     var img2 = document.createElement("img");
+    img = document.createElement("img");
+    img.src = pics[0];
+    div.appendChild(img);
     img2.src = pics[1];
     img2.className = "hidden";
-    //div.appendChild(img2);
+    div.appendChild(img2);
 
     setInterval(function () {
         if (!hovering) {
             if (loopInc == 1) {
-                img.className = "";
-                img2.className = "hidden";
-                div.insertBefore(img, div.firstChild);
-                div.removeChild(img2);
-            } else {
                 img.className = "hidden";
                 img2.className = "";
                 div.insertBefore(img2, div.firstChild);
                 div.removeChild(img);
+            } else {
+                img.className = "";
+                img2.className = "hidden";
+                div.insertBefore(img, div.firstChild);
+                div.removeChild(img2);
             }
             eventTime.innerHTML = times[loopInc];
             eventName.innerHTML = names[loopInc];
