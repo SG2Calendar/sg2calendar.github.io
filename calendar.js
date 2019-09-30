@@ -133,16 +133,16 @@ function doubleDay(day, div) {
     var eventName = helper[2];
     var img = div.getElementsByTagName("img")[0];
     var names = ["Moonlight Box", "Budokan PvP"];
-    var pics = ["https://i.imgur.com/qviJbdt.jpg?", "https://i.imgur.com/hdgCOcG.jpg?"];
+    var pics = ["https://i.imgur.com/zGm6lA5.png", "https://i.imgur.com/hdgCOcG.jpg?"];
     var times = ["All Day", "19:00"];
     var img2 = document.createElement("img");
     img2.src = pics[1];
     img2.className = "hidden";
-    div.appendChild(img2);
+    //div.appendChild(img2);
 
     setInterval(function () {
         if (!hovering) {
-            if (loopInc == 0) {
+            if (loopInc == 1) {
                 img.className = "";
                 img2.className = "hidden";
                 div.insertBefore(img, div.firstChild);
