@@ -113,14 +113,14 @@ function doubleDay(day, div) {
     div.addEventListener("mouseover", function () {
         hovering = true;
     });
-    div.addEventListener("mouseover", function () {
+    div.addEventListener("mouseout", function () {
         hovering = false;
     });
     var helper = div.getElementsByTagName("span");
     var eventTime = helper[1];
     var eventName = helper[2];
     var img = div.getElementsByTagName("img")[0];
-    var names = ["Moonlight Treasure Box", "Budokan PvP"];
+    var names = ["Moonlight Box", "Budokan PvP"];
     var pics = ["https://i.imgur.com/qviJbdt.jpg?", "https://i.imgur.com/hdgCOcG.jpg?"];
     var times = ["All Day", "19:00"];
     var i = 0;
