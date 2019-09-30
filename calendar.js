@@ -108,7 +108,7 @@ function CreateDay(day, data) {
                 img.width = "1px";
                 img.height = "1px";
                 document.getElementById("hiddenContainer").appendChild(img);
-            } catch () {
+            } catch (e) {
 
             }
             div.addEventListener("mouseenter", function () {
