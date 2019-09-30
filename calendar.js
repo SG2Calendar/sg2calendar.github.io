@@ -5,6 +5,7 @@
 var calendarDate = new Date();
 var dayImageErrorUrl = "./images/sg2global/logo156x88.png"; //change my url if needed
 var hovering = false;
+var loopInc = 0;
 
 
 
@@ -102,7 +103,10 @@ function CreateDay(day, data) {
             document.getElementById("calendar-hero-img").src = data.som; //screen of the month
             title.className = "";
         });
+        if (day.n === "OX Event")
+            div.classList.add("flip");
         if (day.d == 26) {
+            
             doubleDay(day, div);
         }
     }
@@ -112,9 +116,17 @@ function CreateDay(day, data) {
 function doubleDay(day, div) {
     div.addEventListener("mouseover", function () {
         hovering = true;
+        if (loopInc == 0) {
+            document.getElementById("calendar-hero-img").src = img.src;
+        } else {
+            document.getElementById("calendar-hero-img").src = img2.src;
+        }
+        title.className = "hidden";
     });
     div.addEventListener("mouseout", function () {
         hovering = false;
+        document.getElementById("calendar-hero-img").src = data.som; //screen of the month
+        title.className = "";
     });
     var helper = div.getElementsByTagName("span");
     var eventTime = helper[1];
@@ -123,7 +135,6 @@ function doubleDay(day, div) {
     var names = ["Moonlight Box", "Budokan PvP"];
     var pics = ["https://i.imgur.com/qviJbdt.jpg?", "https://i.imgur.com/hdgCOcG.jpg?"];
     var times = ["All Day", "19:00"];
-    var i = 0;
     var img2 = document.createElement("img");
     img2.src = pics[1];
     img2.className = "hidden";
@@ -131,7 +142,7 @@ function doubleDay(day, div) {
 
     setInterval(function () {
         if (!hovering) {
-            if (i == 0) {
+            if (loopInc == 0) {
                 img.className = "";
                 img2.className = "hidden";
                 div.insertBefore(img, div.firstChild);
@@ -142,11 +153,11 @@ function doubleDay(day, div) {
                 div.insertBefore(img2, div.firstChild);
                 div.removeChild(img);
             }
-            eventTime.innerHTML = times[i];
-            eventName.innerHTML = names[i];
-            i = i + 1;
-            if (i == pics.length) {
-                i = 0;
+            eventTime.innerHTML = times[loopInc];
+            eventName.innerHTML = names[loopInc];
+            loopInc = loopInc + 1;
+            if (loopInc == pics.length) {
+                loopInc = 0;
             }
         }
     }, 1000);
