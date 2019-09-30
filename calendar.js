@@ -95,22 +95,18 @@ function CreateDay(day, data) {
         el.innerHTML = day.n; // event time
         el.className = "calendar-event-name";
         div.appendChild(el);
-        
+
         if (day.n === "OX Event" || day.n === "Mining Party")
             div.classList.add("flip");
 
         if (helper !== undefined) {
             doubleDay(helper, div, data.som);
         } else {
-            try {
-                var img = document.createElement("img");
-                img.src = day.u;
-                img.width = "1px";
-                img.height = "1px";
-                document.getElementById("hiddenContainer").appendChild(img);
-            } catch (e) {
-
-            }
+            var img = document.createElement("img");
+            img.src = day.u;
+            img.width = "1px";
+            img.height = "1px";
+            document.getElementById("hiddenContainer").appendChild(img);
             div.addEventListener("mouseenter", function () {
                 document.getElementById("calendar-hero-img").src = day.u;
                 title.className = "hidden";
