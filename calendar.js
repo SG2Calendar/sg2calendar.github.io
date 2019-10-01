@@ -1,1 +1,281 @@
-﻿var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"], calendarDate = new Date, dayImageErrorUrl = "./images/logo.png", hovering = !1, loopInc = 0; function CalendarInit() { var e = jsonData[calendarDate.getMonth() + "" + calendarDate.getFullYear()]; if (void 0 !== e) { title = document.getElementById("calendar-monthTitle"), title.innerHTML = monthNames[calendarDate.getMonth()] + " Calendar", title.style.color = "#" + e.tc; var a = "0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px aqua, 0 0 30px aqua, 0 0 40px aqua, 0 0 55px aqua, 0 0 75px aqua"; a = a.replace(/aqua/g, "#" + e.ec), title.style.textShadow = a, document.getElementById("calendar-hero-img").src = e.som; for (var t, n = document.getElementById("calendar-panel"), r = document.getElementById("calendar-sidebar"), l = 0; l < e.days.length; l++)if (t = e.days[l], n.appendChild(CreateDay(t, e)), t.d >= calendarDate.getDate() && t.d < calendarDate.getDate() + 10) { var d = CreateSidebarDay(t); void 0 !== d && r.appendChild(d) } nextPrevMonthExists() } else nextMonth() } function CreateDay(e, a) { var t; void 0 !== e.e && (t = e, (e = e.e[0]).d = t.d); var n = document.createElement("div"); n.className = "day calendar-container border"; var r = document.createElement("img"); if (r.src = e.i, r.onerror = function () { dayImgError(this, a) }, n.appendChild(r), 0 !== e.d) if ((r = document.createElement("span")).innerHTML = e.d, n.appendChild(r), (r = document.createElement("span")).innerHTML = e.t, r.className = "calendar-event-time", n.appendChild(r), (r = document.createElement("span")).innerHTML = e.n, r.className = "calendar-event-name", n.appendChild(r), "OX Event" !== e.n && "Mining Party" !== e.n || n.classList.add("flip"), void 0 !== t) doubleDay(t, n, a.som); else { if (null != e.u) { var l = document.createElement("img"); l.src = e.u, l.width = "1px", l.height = "1px", document.getElementById("hiddenContainer").appendChild(l), n.addEventListener("mouseenter", function () { document.getElementById("calendar-hero-img").src = e.u, title.className = "hidden" }), n.addEventListener("mouseleave", function () { document.getElementById("calendar-hero-img").src = a.som, title.className = "" }) } n.addEventListener("click", function () { "" !== e.g && window.open(e.g, "_blank") }) } return n } function doubleDay(e, a, t) { a.addEventListener("mouseenter", function () { hovering = !0, document.getElementById("calendar-hero-img").src = 1 == loopInc ? "https://i.imgur.com/jSB6MuY.png" : m.src, title.className = "hidden" }), a.addEventListener("mouseleave", function () { hovering = !1, document.getElementById("calendar-hero-img").src = t, title.className = "" }), a.addEventListener("click", function () { 1 == loopInc && window.open("https://www.sg2global.com/forum/index.php?thread/367-event-moonlight-treasure-box/", "_blank") }); var n = a.getElementsByTagName("span"), r = n[1], l = n[2], d = a.getElementsByTagName("img")[0]; a.removeChild(d); var o = ["Moonlight Box", "Budokan PvP"], c = ["https://i.imgur.com/zGm6lA5.png", "https://i.imgur.com/IllUyVq.png?"], i = ["All Day", "19:00"], m = document.createElement("img"); (d = document.createElement("img")).src = c[0], m.src = c[1], a.appendChild(m), setInterval(function () { hovering || (1 == loopInc ? (d.className = "hidden", m.className = "", a.insertBefore(m, a.firstChild), a.removeChild(d)) : (d.className = "", m.className = "hidden", a.insertBefore(d, a.firstChild), a.removeChild(m)), r.innerHTML = i[loopInc], l.innerHTML = o[loopInc], (loopInc += 1) == c.length && (loopInc = 0)) }, 1e3) } function CreateSidebarDay(e) { if ("" !== e.n) { var a = document.createElement("li"); a.className = "box24"; var t = document.createElement("a"); t.href = e.g, a.appendChild(t); var n = document.createElement("img"); n.src = e.i, n.style.width = "32px", n.style.height = "32px", n.className = "userAvatarImage", t.appendChild(n); var r = document.createElement("div"); return r.className = "sidebarItemTitle", a.appendChild(r), n = document.createElement("h3"), r.appendChild(n), (t = document.createElement("a")).href = e.g, t.innerHTML = e.n, n.appendChild(t), n = document.createElement("small"), r.appendChild(n), n.innerHTML = e.d + " " + monthNames[calendarDate.getMonth()] + " - ", "" === e.t || "All Day" == e.t ? n.innerHTML += e.t : n.innerHTML += e.t + " GMT", a } } function dayImgError(e, a) { var t = e.parentNode; t.removeChild(e), t.className += " calendar-img-fail-load", (e = document.createElement("img")).src = dayImageErrorUrl, t.appendChild(e) } function previousMonth() { var e = calendarDate.getMonth() - 1; e < 0 ? (calendarDate.setMonth(11), calendarDate.setFullYear(calendarDate.getFullYear() - 1)) : calendarDate.setMonth(e); var a = new Date; a.getMonth === calendarDate.getMonth() ? calendarDate.setUTCDate(a.getUTCDate()) : calendarDate.setUTCDate(1), ClearContainers(), CalendarInit() } function nextMonth() { var e = calendarDate.getMonth() + 1; e > 11 ? (calendarDate.setMonth(0), calendarDate.setFullYear(calendarDate.getFullYear() + 1)) : calendarDate.setMonth(e); var a = new Date; a.getMonth === calendarDate.getMonth() ? calendarDate.setUTCDate(a.getUTCDate()) : calendarDate.setUTCDate(1), ClearContainers(), CalendarInit() } function ClearContainers() { for (var e = document.getElementById("calendar-panel"); e.firstChild;)e.removeChild(e.firstChild); for (e = document.getElementById("calendar-sidebar"); e.firstChild;)e.removeChild(e.firstChild) } function nextPrevMonthExists() { var e, a = calendarDate.getMonth() + 1; e = a > 11 ? new Date(calendarDate.getFullYear() + 1, 0) : new Date(calendarDate.getFullYear(), a), void 0 !== jsonData[e.getMonth() + "" + e.getFullYear()] ? document.getElementById("calendar-next").style.width = "50%" : document.getElementById("calendar-next").style.width = "0px", e = (a = calendarDate.getMonth() - 1) < 0 ? new Date(calendarDate.getFullYear() - 1, 11) : new Date(calendarDate.getFullYear(), a), void 0 !== jsonData[e.getMonth() + "" + e.getFullYear()] ? document.getElementById("calendar-prev").style.width = "50%" : document.getElementById("calendar-prev").style.width = "0px" }
+﻿var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+var calendarDate = new Date();
+var dayImageErrorUrl = "./images/logo.png";
+var hovering = false;
+var loopInc = 0;
+
+function CalendarInit() {
+    var data = jsonData[calendarDate.getMonth() + "" + calendarDate.getFullYear()];
+    if (data === undefined) {
+        nextMonth();
+        return;
+    }
+
+    title = document.getElementById("calendar-monthTitle");
+    title.innerHTML = monthNames[calendarDate.getMonth()] + " Calendar";
+    title.style.color = "#" + data.tc;
+    var textShadow = "0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px aqua, 0 0 30px aqua, 0 0 40px aqua, 0 0 55px aqua, 0 0 75px aqua";
+    textShadow = textShadow.replace(/aqua/g, "#" + data.ec);
+    title.style.textShadow = textShadow;
+
+    document.getElementById("calendar-hero-img").src = data.som;
+
+    var calendar = document.getElementById("calendar-panel");
+    var sidebar = document.getElementById("calendar-sidebar");
+    var day;
+    for (var i = 0; i < data.days.length; i++) {
+        day = data.days[i];
+        calendar.appendChild(CreateDay(day, data));
+        if (day.d >= calendarDate.getDate() && day.d < calendarDate.getDate() + 10) {
+            var sd = CreateSidebarDay(day);
+            if (sd !== undefined)
+                sidebar.appendChild(sd);
+        }
+    }
+    nextPrevMonthExists();
+}
+
+function CreateDay(day, data) {
+    var helper;
+    if (day.e !== undefined) {
+        helper = day;
+        day = day.e[0];
+        day.d = helper.d;
+    }
+    var div = document.createElement("div");
+    div.className = "day calendar-container border";
+
+    var el = document.createElement("img");
+    el.src = day.i;
+
+    el.onerror = function () {
+        dayImgError(this, data);
+    };
+    div.appendChild(el);
+
+    if (day.d !== 0) {
+        el = document.createElement("span");
+        el.innerHTML = day.d;
+        div.appendChild(el);
+
+        el = document.createElement("span");
+        el.innerHTML = day.t;
+        el.className = "calendar-event-time";
+        div.appendChild(el);
+
+        el = document.createElement("span");
+        el.innerHTML = day.n;
+        el.className = "calendar-event-name";
+        div.appendChild(el);
+
+        if (day.n === "OX Event" || day.n === "Mining Party")
+            div.classList.add("flip");
+
+        if (helper !== undefined) {
+            doubleDay(helper, div, data.som);
+        } else {
+            if (day.u != undefined) {
+                var img = document.createElement("img");
+                img.src = day.u;
+                img.width = "1px";
+                img.height = "1px";
+                document.getElementById("hiddenContainer").appendChild(img);
+                div.addEventListener("mouseenter", function () {
+                    document.getElementById("calendar-hero-img").src = day.u;
+                    title.className = "hidden";
+                });
+
+                div.addEventListener("mouseleave", function () {
+                    document.getElementById("calendar-hero-img").src = data.som;
+                    title.className = "";
+                });
+            }
+            div.addEventListener("click", function () {
+                if (day.g !== "")
+                    window.open(day.g, '_blank');
+            });
+        }
+    }
+    return div;
+}
+
+
+function doubleDay(day, div, som) {
+    div.addEventListener("mouseenter", function () {
+        hovering = true;
+        if (loopInc == 1) {
+            document.getElementById("calendar-hero-img").src = "https://i.imgur.com/jSB6MuY.png";
+        } else {
+            document.getElementById("calendar-hero-img").src = img2.src;
+        }
+        title.className = "hidden";
+    });
+    div.addEventListener("mouseleave", function () {
+        hovering = false;
+        document.getElementById("calendar-hero-img").src = som;
+        title.className = "";
+    });
+    div.addEventListener("click", function () {
+        if (loopInc == 1) {
+            window.open("https://www.sg2global.com/forum/index.php?thread/367-event-moonlight-treasure-box/", '_blank');
+        } else {
+            //window.open("", '_blank'); //goes to given forum link
+        }
+    });
+    var helper = div.getElementsByTagName("span");
+    var eventTime = helper[1];
+    var eventName = helper[2];
+    var img = div.getElementsByTagName("img")[0];
+    div.removeChild(img);
+
+    var names = ["Moonlight Box", "Budokan PvP"];
+    var pics = ["https://i.imgur.com/zGm6lA5.png", "https://i.imgur.com/IllUyVq.png?"];
+
+    var times = ["All Day", "19:00"];
+    var img2 = document.createElement("img");
+    img = document.createElement("img");
+    img.src = pics[0];
+    img2.src = pics[1];
+    div.appendChild(img2);
+
+    setInterval(function () {
+        if (!hovering) {
+            if (loopInc == 1) {
+                img.className = "hidden";
+                img2.className = "";
+                div.insertBefore(img2, div.firstChild);
+                div.removeChild(img);
+            } else {
+                img.className = "";
+                img2.className = "hidden";
+                div.insertBefore(img, div.firstChild);
+                div.removeChild(img2);
+            }
+            eventTime.innerHTML = times[loopInc];
+            eventName.innerHTML = names[loopInc];
+            loopInc = loopInc + 1;
+            if (loopInc == pics.length) {
+                loopInc = 0;
+            }
+        }
+    }, 1000);
+}
+
+function CreateSidebarDay(day) {
+    if (day.n === "")
+        return undefined;
+    var li = document.createElement("li");
+    li.className = "box24";
+    var el = document.createElement("a");
+    el.href = day.g;
+    li.appendChild(el);
+    var el2 = document.createElement("img");
+    el2.src = day.i;
+    el2.style.width = "32px";
+    el2.style.height = "32px";
+    el2.className = "userAvatarImage";
+    el.appendChild(el2);
+    var div = document.createElement("div");
+    div.className = "sidebarItemTitle";
+    li.appendChild(div);
+    el2 = document.createElement("h3");
+    div.appendChild(el2);
+    el = document.createElement("a");
+    el.href = day.g;
+    el.innerHTML = day.n;
+    el2.appendChild(el);
+    el2 = document.createElement("small");
+    div.appendChild(el2);
+    el2.innerHTML = day.d + " " + monthNames[calendarDate.getMonth()] + " - ";
+    if (day.t === "" || day.t == "All Day")
+        el2.innerHTML += day.t;
+    else
+        el2.innerHTML += day.t + " GMT";
+    return li;
+}
+
+
+function dayImgError(el, data) {
+    var div = el.parentNode;
+    div.removeChild(el);
+    div.className += " calendar-img-fail-load";
+    el = document.createElement("img");
+    el.src = dayImageErrorUrl;
+    div.appendChild(el);
+}
+
+function previousMonth() {
+    var m = calendarDate.getMonth() - 1;
+    if (m < 0) {
+        calendarDate.setMonth(11);
+        calendarDate.setFullYear(calendarDate.getFullYear() - 1);
+    } else {
+        calendarDate.setMonth(m);
+    }
+    var date = new Date();
+    if (date.getMonth === calendarDate.getMonth()) {
+        calendarDate.setUTCDate(date.getUTCDate());
+    } else {
+        calendarDate.setUTCDate(1);
+    }
+    ClearContainers();
+    CalendarInit();
+}
+
+function nextMonth() {
+    var m = calendarDate.getMonth() + 1;
+    if (m > 11) {
+        calendarDate.setMonth(0);
+        calendarDate.setFullYear(calendarDate.getFullYear() + 1);
+    } else {
+        calendarDate.setMonth(m);
+    }
+    var date = new Date();
+    if (date.getMonth === calendarDate.getMonth()) {
+        calendarDate.setUTCDate(date.getUTCDate());
+    } else {
+        calendarDate.setUTCDate(1);
+    }
+    ClearContainers();
+    CalendarInit();
+}
+
+function ClearContainers() {
+    var myNode = document.getElementById("calendar-panel");
+    while (myNode.firstChild) {
+        myNode.removeChild(myNode.firstChild);
+    }
+    myNode = document.getElementById("calendar-sidebar");
+    while (myNode.firstChild) {
+        myNode.removeChild(myNode.firstChild);
+    }
+}
+
+function nextPrevMonthExists() {
+    var m = calendarDate.getMonth() + 1;
+    var newDate;
+    if (m > 11) {
+        newDate = new Date(calendarDate.getFullYear() + 1, 0);
+    } else {
+        newDate = new Date(calendarDate.getFullYear(), m);
+    }
+    if (jsonData[newDate.getMonth() + "" + newDate.getFullYear()] !== undefined) {
+        document.getElementById("calendar-next").style.width = "50%";
+    } else {
+        document.getElementById("calendar-next").style.width = "0px";
+    }
+
+    m = calendarDate.getMonth() - 1;// prev
+    if (m < 0) {
+        newDate = new Date(calendarDate.getFullYear() - 1, 11);
+    } else {
+        newDate = new Date(calendarDate.getFullYear(), m);
+    }
+
+    if (jsonData[newDate.getMonth() + "" + newDate.getFullYear()] !== undefined) {
+        document.getElementById("calendar-prev").style.width = "50%";
+    } else {
+        document.getElementById("calendar-prev").style.width = "0px";
+    }
+}
