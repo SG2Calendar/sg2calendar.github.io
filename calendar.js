@@ -101,6 +101,66 @@ function CreateDay(day, data) {
 }
 
 
+//function doubleDay(day, div, som) {
+//    var helper = div.getElementsByTagName("span");
+//    var eventTime = helper[1];
+//    var eventName = helper[2];
+//    var img = div.getElementsByTagName("img")[0];
+//    div.removeChild(img);
+    
+//    var data = [];
+//    var els = [];
+//    for (var i = 0; i < day.e.length; i++) {
+//        var d = day.e[i];
+//        var image = document.createElement("img");
+//        image.src = d.i;
+//        div.appendChild(image);
+//        data.push(d);
+//        els.push(image);
+//    }
+//    //var img2 = document.createElement("img");
+//    //img = document.createElement("img");
+//    //img.src = pics[0];
+//    //img2.src = pics[1];
+//    //div.appendChild(img2);
+
+//    div.addEventListener("mouseenter", function () {
+//        hovering = true;
+//        document.getElementById("calendar-hero-img").src = els[i].src;
+//        title.className = "hidden";
+//    });
+//    div.addEventListener("mouseleave", function () {
+//        hovering = false;
+//        document.getElementById("calendar-hero-img").src = som;
+//        title.className = "";
+//    });
+//    div.addEventListener("click", function () {
+//        window.open(data., '_blank');
+//    });
+
+//    setInterval(function () {
+//        if (!hovering) {
+//            if (loopInc == 1) {
+//                img.className = "hidden";
+//                img2.className = "";
+//                div.insertBefore(img2, div.firstChild);
+//                div.removeChild(img);
+//            } else {
+//                img.className = "";
+//                img2.className = "hidden";
+//                div.insertBefore(img, div.firstChild);
+//                div.removeChild(img2);
+//            }
+//            eventTime.innerHTML = times[loopInc];
+//            eventName.innerHTML = names[loopInc];
+//            loopInc = loopInc + 1;
+//            if (loopInc == pics.length) {
+//                loopInc = 0;
+//            }
+//        }
+//    }, 1000);
+//}
+
 function doubleDay(day, div, som) {
     div.addEventListener("mouseenter", function () {
         hovering = true;
