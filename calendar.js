@@ -4,6 +4,7 @@ var calendarDate = new Date();
 var dayImageErrorUrl = "./images/logo.png";
 var hovering = false;
 var loopInc = 0;
+var oxInc = 0;
 
 function CalendarInit() {
     var data = jsonData[calendarDate.getMonth() + "" + calendarDate.getFullYear()];
@@ -63,6 +64,21 @@ function CreateDay(day, data) {
         el.innerHTML = day.t;
         el.className = "calendar-event-time";
         div.appendChild(el);
+        if (day.d === 3 || day.d === 10 || day.d === 17 || day.d === 24 || day.d === 31) {
+            var span = el;
+            setInterval(function () {
+                if (oxInc === 1) {
+                    span.innerHTML = "19:00";
+                } else {
+                    span.innerHTML = "15:00";
+                }
+                oxInc = oxInc + 1;
+                console.log(oxInc);
+                if (oxInc === 2) {
+                    oxInc = 0;
+                }
+            }, 1000);
+        }
 
         el = document.createElement("span");
         el.innerHTML = day.n;
@@ -104,7 +120,7 @@ function doubleDay(day, div, som) {
     div.addEventListener("mouseenter", function () {
         hovering = true;
         if (loopInc == 1) {
-            document.getElementById("calendar-hero-img").src = "https://i.imgur.com/jSB6MuY.png";
+            document.getElementById("calendar-hero-img").src = "https://i.imgur.com/9BgHnmP.jpg";
         } else {
             document.getElementById("calendar-hero-img").src = img2.src;
         }
