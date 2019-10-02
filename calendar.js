@@ -30,8 +30,16 @@ function CalendarInit() {
         calendar.appendChild(CreateDay(day, data));
         if (day.d >= calendarDate.getDate() && day.d < calendarDate.getDate() + 10) {
             var sd = CreateSidebarDay(day);
-            if (sd !== undefined)
+            if (sd !== undefined) {
+                if (day.d === 3 || day.d === 10 || day.d === 17 || day.d === 24 || day.d === 31) {
+                    //var cloned = sd.cloneNode(true);
+                    var small = sd.querySelector("small");
+                    var str = small.innerHTML;
+                    var res = str.slice(0, str.length - 9) + "15:00 GMT and 19:00 GMT";
+                    small.innerHTML = res;
+                }
                 sidebar.appendChild(sd);
+            }
         }
     }
     nextPrevMonthExists();
@@ -73,7 +81,6 @@ function CreateDay(day, data) {
                     span.innerHTML = "15:00";
                 }
                 oxInc = oxInc + 1;
-                console.log(oxInc);
                 if (oxInc === 2) {
                     oxInc = 0;
                 }
@@ -122,7 +129,7 @@ function doubleDay(day, div, som) {
         if (loopInc == 1) {
             document.getElementById("calendar-hero-img").src = "https://i.imgur.com/9BgHnmP.jpg";
         } else {
-            document.getElementById("calendar-hero-img").src = img2.src;
+            document.getElementById("calendar-hero-img").src = "https://i.imgur.com/AilHpWj.jpg";
         }
         title.className = "hidden";
     });
@@ -145,7 +152,7 @@ function doubleDay(day, div, som) {
     div.removeChild(img);
 
     var names = ["Moonlight Box", "Budokan PvP"];
-    var pics = ["https://i.imgur.com/zGm6lA5.png", "https://i.imgur.com/IllUyVq.png?"];
+    var pics = ["https://i.imgur.com/zGm6lA5.png", "https://i.imgur.com/LmwH11a.png"];
 
     var times = ["All Day", "19:00"];
     var img2 = document.createElement("img");

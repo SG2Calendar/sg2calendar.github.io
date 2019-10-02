@@ -223,11 +223,11 @@ var jsonData = {
                 "d": 26,
                 "e": [
                     {
-                        "i": "https://i.imgur.com/zGm6lA5.png",
-                        "u": "https://i.imgur.com/9BgHnmP.jpg",
+                        "i": "https://i.imgur.com/LmwH11a.png",
+                        "u": "https://i.imgur.com/AilHpWj.jpg",
                         "g": "",
                         "t": "19:00",
-                        "n": "Budokan"
+                        "n": "Budokan PvP"
                     },
                     {
                         "i": "https://i.imgur.com/zGm6lA5.png",
