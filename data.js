@@ -142,10 +142,11 @@ var jsonData = {
             },
             {
                 "d": 16,
-                "i": "./images/logo.png",
+                "i": "https://i.imgur.com/SRFNp3n.png",
                 "g": "",
                 "t": "19:00",
-                "n": "Fishing Extravaganza"
+                "n": "Fishing Extravaganza",
+                "u":"https://i.imgur.com/AAAnsjL.jpg"
             },
             {
                 "d": 17,

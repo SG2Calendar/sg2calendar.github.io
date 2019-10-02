@@ -98,7 +98,7 @@ function CreateDay(day, data) {
         if (helper !== undefined) {
             doubleDay(helper, div, data.som);
         } else {
-            if (day.u != undefined) {
+            if (day.u != undefined && day.d !== 0) {
                 var img = document.createElement("img");
                 img.src = day.u;
                 img.width = "1px";
