@@ -55,7 +55,7 @@ var jsonData = {
             {
                 "d": 5,
                 "i": "https://i.imgur.com/nnJgE4E.png",
-                "g": "",
+                "g": "https://www.sg2global.com/forum/index.php?thread/551-event-hexagonal-box/",
                 "t": "All Day",
                 "n": "Hexagonal Box",
                 "u":"https://i.imgur.com/kgPPMkZ.jpg"
@@ -63,7 +63,7 @@ var jsonData = {
             {
                 "d": 6,
                 "i": "https://i.imgur.com/nnJgE4E.png",
-                "g": "",
+                "g": "https://www.sg2global.com/forum/index.php?thread/551-event-hexagonal-box/",
                 "t": "All Day",
                 "n": "Hexagonal Box",
                 "u": "https://i.imgur.com/kgPPMkZ.jpg"
