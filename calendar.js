@@ -142,7 +142,7 @@ function doubleDay(day, div, som) {
         if (loopInc == 1) {
             window.open("https://www.sg2global.com/forum/index.php?thread/367-event-moonlight-treasure-box/", '_blank');
         } else {
-            //window.open("", '_blank'); //goes to given forum link
+            window.open("https://www.sg2global.com/forum/index.php?thread/549-event-budokan-pvp-event/", '_blank');
         }
     });
     var helper = div.getElementsByTagName("span");
