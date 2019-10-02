@@ -29,7 +29,7 @@ function CalendarInit() {
         day = data.days[i];
         calendar.appendChild(CreateDay(day, data));
         if (day.d >= calendarDate.getDate() && day.d < calendarDate.getDate() + 10) {
-            var sd = CreateSidebarDay(day);
+            var sd = CreateSidebarDay(day, data.som);
             if (sd !== undefined) {
                 if (day.d === 3 || day.d === 10 || day.d === 17 || day.d === 24 || day.d === 31) {
                     //var cloned = sd.cloneNode(true);
@@ -184,7 +184,7 @@ function doubleDay(day, div, som) {
     }, 1000);
 }
 
-function CreateSidebarDay(day) {
+function CreateSidebarDay(day, som) {
     if (day.n === "")
         return undefined;
     var li = document.createElement("li");
@@ -214,6 +214,19 @@ function CreateSidebarDay(day) {
         el2.innerHTML += day.t;
     else
         el2.innerHTML += day.t + " GMT";
+
+    if (day.u != undefined) {
+        li.addEventListener("mouseenter", function () {
+            document.getElementById("calendar-hero-img").src = day.u;
+            title.className = "hidden";
+        });
+
+        li.addEventListener("mouseleave", function () {
+            document.getElementById("calendar-hero-img").src = som;
+            title.className = "";
+        });
+    }
+
     return li;
 }
 
