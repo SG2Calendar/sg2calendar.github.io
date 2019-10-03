@@ -46,11 +46,11 @@ var jsonData = {
             },
             {
                 "d": 4,
-                "i": "https://i.imgur.com/M015dld.png",
-                "g": "https://www.sg2global.com/forum/index.php?thread/365-event-dt-run/",
+                "i": "https://i.imgur.com/CX7RHb8.png",
+                "g": "https://www.sg2global.com/forum/index.php?thread/553-event-community-event/",
                 "t": "19:00",
-                "n": "DT Run",
-                "u": "https://i.imgur.com/l9rRJLi.jpg"
+                "n": "Community Event",
+                "u": "https://i.imgur.com/myvtj8x.png"
             },
             {
                 "d": 5,
