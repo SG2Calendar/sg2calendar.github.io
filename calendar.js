@@ -90,6 +90,9 @@ function CreateDay(day, data) {
         el = document.createElement("span");
         el.innerHTML = day.n;
         el.className = "calendar-event-name";
+        if (day.n.length > 13) {
+            el.className += " longText";
+        }
         div.appendChild(el);
 
         if (day.n === "OX Event" || day.n === "Mining Party")
@@ -194,8 +197,8 @@ function CreateSidebarDay(day, som) {
     li.appendChild(el);
     var el2 = document.createElement("img");
     el2.src = day.i;
-    el2.style.width = "32px";
-    el2.style.height = "32px";
+    //el2.style.width = "32px";
+    //el2.style.height = "32px";
     el2.className = "userAvatarImage";
     el.appendChild(el2);
     var div = document.createElement("div");
