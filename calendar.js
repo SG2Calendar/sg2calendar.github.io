@@ -29,17 +29,7 @@ function CalendarInit() {
         day = data.days[i];
         calendar.appendChild(CreateDay(day, data));
         if (day.d >= calendarDate.getDate() && day.d < calendarDate.getDate() + 10) {
-            var sd = CreateSidebarDay(day, data.som);
-            if (sd !== undefined) {
-                if (day.d === 3 || day.d === 10 || day.d === 17 || day.d === 24 || day.d === 31) {
-                    //var cloned = sd.cloneNode(true);
-                    var small = sd.querySelector("small");
-                    var str = small.innerHTML;
-                    var res = str.slice(0, str.length - 9) + "15:00 GMT and 19:00 GMT";
-                    small.innerHTML = res;
-                }
-                sidebar.appendChild(sd);
-            }
+            CreateSidebarDay(day, data.som, sidebar);
         }
     }
     nextPrevMonthExists();
@@ -187,9 +177,31 @@ function doubleDay(day, div, som) {
     }, 1000);
 }
 
-function CreateSidebarDay(day, som) {
+function CreateSidebarDay(day, som, sidebar) {
     if (day.n === "")
         return undefined;
+    var li;
+    if (day.e !== undefined) {
+        for (var i = 0; i < day.e.length; i++) {
+            var d = day.e[i];
+            d.d = day.d;
+            li = sidebarEntry(d, som);
+            sidebar.appendChild(li);
+        }
+    } else {
+        li = sidebarEntry(day, som);
+
+        if (day.d === 3 || day.d === 10 || day.d === 17 || day.d === 24 || day.d === 31) {
+            var small = li.querySelector("small");
+            var str = small.innerHTML;
+            var res = str.slice(0, str.length - 9) + "15:00 GMT and 19:00 GMT";
+            small.innerHTML = res;
+        }
+        sidebar.appendChild(li);
+    }
+}
+
+function sidebarEntry(day, som) {
     var li = document.createElement("li");
     li.className = "box24";
     var el = document.createElement("a");
@@ -229,7 +241,6 @@ function CreateSidebarDay(day, som) {
             title.className = "";
         });
     }
-
     return li;
 }
 
