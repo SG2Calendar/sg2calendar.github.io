@@ -1,10 +1,10 @@
 ﻿var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
 var calendarDate = new Date();
-var dayImageErrorUrl = "./images/logo.png";
+var dayImageErrorUrl = "./images/error.png";
 var hovering = false;
 var loopInc = 0;
-var oxInc = 0;
+var loaded = false;
 
 function CalendarInit() {
     var data = jsonData[calendarDate.getMonth() + "" + calendarDate.getFullYear()];
@@ -25,23 +25,62 @@ function CalendarInit() {
     var calendar = document.getElementById("calendar-panel");
     var sidebar = document.getElementById("calendar-sidebar");
     var day;
-    for (var i = 0; i < data.days.length; i++) {
+    var i;
+    for (i = 0; i < data.days.length; i++) {
         day = data.days[i];
         calendar.appendChild(CreateDay(day, data));
-        if (day.d >= calendarDate.getDate() && day.d < calendarDate.getDate() + 10) {
+    }
+
+    if (!loaded) {
+        var today = calendarDate.getDate();
+        var daysInMonth = new Date(calendarDate.getFullYear(), calendarDate.getMonth() + 1, 0).getDate();
+        var exceeds = today + 10 > daysInMonth;
+        var day0Count = 0;
+        for (i = 0; i < data.days.length; i++) {
+            day = data.days[i];
+            if (day.d === 0) {
+                ++day0Count;
+            } else {
+                break;
+            }
+        }
+        for (i = today + day0Count - 1; i < (exceeds ? daysInMonth : today + 10) + day0Count; i++) {
+            day = data.days[i];
             CreateSidebarDay(day, data.som, sidebar);
         }
+        if (exceeds) {
+            var nextData = jsonData[calendarDate.getMonth() + 1 + "" + calendarDate.getFullYear()];
+            if (nextData !== undefined) {
+                var excess = today + 10 - daysInMonth;
+                day0Count = 0;
+                for (i = 0; i < nextData.days.length; i++) {
+                    day = nextData.days[i];
+                    if (day.d === 0) {
+                        ++day0Count;
+                    } else {
+                        break;
+                    }
+                }
+                for (i = day0Count; i < excess + day0Count; i++) {
+                    day = nextData.days[i];
+                    CreateSidebarDay(day, data.som, sidebar);
+                } 
+            }
+        }
     }
+
+    loaded = true;
     nextPrevMonthExists();
 }
 
+var dynamicDays = [];
 function CreateDay(day, data) {
-    var helper;
+    var helper = day;
     if (day.e !== undefined) {
-        helper = day;
         day = day.e[0];
         day.d = helper.d;
     }
+
     var div = document.createElement("div");
     div.className = "day calendar-container border";
 
@@ -62,20 +101,6 @@ function CreateDay(day, data) {
         el.innerHTML = day.t;
         el.className = "calendar-event-time";
         div.appendChild(el);
-        if (day.d === 3 || day.d === 10 || day.d === 17 || day.d === 24 || day.d === 31) {
-            var span = el;
-            setInterval(function () {
-                if (oxInc === 1) {
-                    span.innerHTML = "19:00";
-                } else {
-                    span.innerHTML = "15:00";
-                }
-                oxInc = oxInc + 1;
-                if (oxInc === 2) {
-                    oxInc = 0;
-                }
-            }, 1000);
-        }
 
         el = document.createElement("span");
         el.innerHTML = day.n;
@@ -85,14 +110,55 @@ function CreateDay(day, data) {
         }
         div.appendChild(el);
 
-        if (day.n === "OX Event" || day.n === "Mining Party")
+        if (day.f !== undefined)
             div.classList.add("flip");
 
-        if (helper !== undefined) {
-            doubleDay(helper, div, data.som);
+        var img;
+        if (helper.e !== undefined) {
+            div.dataset.index = dynamicDays.length;
+            dynamicDays.push(helper);
+            helper.div = div;
+            div.addEventListener("mouseenter", function (obj) {
+                hovering = true;
+                var dd = dynamicDays[obj.target.dataset.index];
+                document.getElementById("calendar-hero-img").src = dd.e[loopInc % dd.e.length].u;
+                title.className = "hidden";
+            });
+
+            div.addEventListener("mouseleave", function () {
+                hovering = false;
+                document.getElementById("calendar-hero-img").src = data.som;
+                title.className = "";
+            });
+
+            div.addEventListener("click", function (obj) {
+                var dd = dynamicDays[obj.target.closest("div").dataset.index];
+                window.open(dd.e[loopInc % dd.e.length].g, '_blank');
+            });
+
+            var sp = div.getElementsByTagName("span");
+            var eventTime = sp[1];
+            helper.eventTime = eventTime;
+            var eventName = sp[2];
+            helper.eventName = eventName;
+
+            img = div.getElementsByTagName("img")[0];
+
+            for (var i = 0; i < helper.e.length; i++) {
+                var e = helper.e[i];
+                if (i !== 0) {
+                    img = document.createElement("img");
+                    img.src = e.i;
+                    div.appendChild(img);
+                }
+                e.img = img;
+                div.removeChild(img);
+            }
+            div.insertBefore(helper.e[0].img, div.firstChild);
+
         } else {
-            if (day.u != undefined && day.d !== 0) {
-                var img = document.createElement("img");
+            if (day.u !== undefined && day.d !== 0) {
+                img = document.createElement("img");
                 img.src = day.u;
                 img.width = "1px";
                 img.height = "1px";
@@ -113,68 +179,8 @@ function CreateDay(day, data) {
             });
         }
     }
+
     return div;
-}
-
-function doubleDay(day, div, som) {
-    div.addEventListener("mouseenter", function () {
-        hovering = true;
-        if (loopInc == 1) {
-            document.getElementById("calendar-hero-img").src = "https://i.imgur.com/9BgHnmP.jpg";
-        } else {
-            document.getElementById("calendar-hero-img").src = "https://i.imgur.com/AilHpWj.jpg";
-        }
-        title.className = "hidden";
-    });
-    div.addEventListener("mouseleave", function () {
-        hovering = false;
-        document.getElementById("calendar-hero-img").src = som;
-        title.className = "";
-    });
-    div.addEventListener("click", function () {
-        if (loopInc == 1) {
-            window.open("https://www.sg2global.com/forum/index.php?thread/367-event-moonlight-treasure-box/", '_blank');
-        } else {
-            window.open("https://www.sg2global.com/forum/index.php?thread/549-event-budokan-pvp-event/", '_blank');
-        }
-    });
-    var helper = div.getElementsByTagName("span");
-    var eventTime = helper[1];
-    var eventName = helper[2];
-    var img = div.getElementsByTagName("img")[0];
-    div.removeChild(img);
-
-    var names = ["Moonlight Box", "Budokan PvP"];
-    var pics = ["https://i.imgur.com/zGm6lA5.png", "https://i.imgur.com/LmwH11a.png"];
-
-    var times = ["All Day", "19:00"];
-    var img2 = document.createElement("img");
-    img = document.createElement("img");
-    img.src = pics[0];
-    img2.src = pics[1];
-    div.appendChild(img2);
-
-    setInterval(function () {
-        if (!hovering) {
-            if (loopInc == 1) {
-                img.className = "hidden";
-                img2.className = "";
-                div.insertBefore(img2, div.firstChild);
-                div.removeChild(img);
-            } else {
-                img.className = "";
-                img2.className = "hidden";
-                div.insertBefore(img, div.firstChild);
-                div.removeChild(img2);
-            }
-            eventTime.innerHTML = times[loopInc];
-            eventName.innerHTML = names[loopInc];
-            loopInc = loopInc + 1;
-            if (loopInc == pics.length) {
-                loopInc = 0;
-            }
-        }
-    }, 1000);
 }
 
 function CreateSidebarDay(day, som, sidebar) {
@@ -182,21 +188,21 @@ function CreateSidebarDay(day, som, sidebar) {
         return undefined;
     var li;
     if (day.e !== undefined) {
+        var d;
         for (var i = 0; i < day.e.length; i++) {
-            var d = day.e[i];
+            if (d !== undefined) {
+                if (d.n === day.e[i].n) {
+                    li.getElementsByTagName("small")[0].innerHTML += " and " + day.e[i].t + " GMT";
+                    continue;
+                }
+            }
+            d = day.e[i];
             d.d = day.d;
             li = sidebarEntry(d, som);
             sidebar.appendChild(li);
         }
     } else {
         li = sidebarEntry(day, som);
-
-        if (day.d === 3 || day.d === 10 || day.d === 17 || day.d === 24 || day.d === 31) {
-            var small = li.querySelector("small");
-            var str = small.innerHTML;
-            var res = str.slice(0, str.length - 9) + "15:00 GMT and 19:00 GMT";
-            small.innerHTML = res;
-        }
         sidebar.appendChild(li);
     }
 }
@@ -209,8 +215,6 @@ function sidebarEntry(day, som) {
     li.appendChild(el);
     var el2 = document.createElement("img");
     el2.src = day.i;
-    //el2.style.width = "32px";
-    //el2.style.height = "32px";
     el2.className = "userAvatarImage";
     el.appendChild(el2);
     var div = document.createElement("div");
@@ -225,12 +229,12 @@ function sidebarEntry(day, som) {
     el2 = document.createElement("small");
     div.appendChild(el2);
     el2.innerHTML = day.d + " " + monthNames[calendarDate.getMonth()] + " - ";
-    if (day.t === "" || day.t == "All Day")
+    if (day.t === "" || day.t === "All Day")
         el2.innerHTML += day.t;
     else
         el2.innerHTML += day.t + " GMT";
 
-    if (day.u != undefined) {
+    if (day.u !== undefined) {
         li.addEventListener("mouseenter", function () {
             document.getElementById("calendar-hero-img").src = day.u;
             title.className = "hidden";
@@ -295,10 +299,7 @@ function ClearContainers() {
     while (myNode.firstChild) {
         myNode.removeChild(myNode.firstChild);
     }
-    myNode = document.getElementById("calendar-sidebar");
-    while (myNode.firstChild) {
-        myNode.removeChild(myNode.firstChild);
-    }
+    dynamicDays.splice(0, dynamicDays.length);
 }
 
 function nextPrevMonthExists() {
@@ -328,3 +329,29 @@ function nextPrevMonthExists() {
         document.getElementById("calendar-prev").style.width = "0px";
     }
 }
+
+
+setInterval(function () {
+    if (!hovering) {
+        var loop = ++loopInc;
+        for (var i = 0; i < dynamicDays.length; i++) {
+            var helper = dynamicDays[i];
+            var index = loop % helper.e.length;
+
+            helper.eventTime.innerHTML = helper.e[index].t;
+            helper.eventName.innerHTML = helper.e[index].n;
+
+            var oldImg = index - 1 < 0 ? helper.e[helper.e.length - 1].img : helper.e[index - 1].img;
+            var newImg = helper.e[index].img;
+
+            if (oldImg.src !== newImg.src) {
+                oldImg.className = "hidden";
+                newImg.className = "";
+                var div = helper.div;
+                div.insertBefore(newImg, div.firstChild);
+                if (div.contains(oldImg))
+                    div.removeChild(oldImg);
+            }
+        }
+    }
+}, 1000);
