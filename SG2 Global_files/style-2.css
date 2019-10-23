@@ -146,11 +146,11 @@ html {
 }
 
     .boxesSidebarRight a {
-        color: rgba(220,36,12,1)
+        color: #ff824a
     }
 
         .boxesSidebarRight a:hover {
-            color: rgba(220,36,12,1)
+            color: #ff824a
         }
 
 @media screen and (min-width:545px) and (max-width:768px) {
