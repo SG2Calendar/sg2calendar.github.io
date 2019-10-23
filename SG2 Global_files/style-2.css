@@ -146,11 +146,11 @@ html {
 }
 
     .boxesSidebarRight a {
-        color: #ff824a
+        color: rgba(220,36,12,1)
     }
 
         .boxesSidebarRight a:hover {
-            color: #ff824a
+            color: rgba(220,36,12,1)
         }
 
 @media screen and (min-width:545px) and (max-width:768px) {
@@ -181,12 +181,12 @@ html {
             overflow: hidden;
             background-clip: padding-box;
             border-bottom: 30px solid transparent;
-            display: block;
+            /*display: block;
             margin: 0 !important;
             width: 100%;
             -webkit-column-break-inside: avoid;
             page-break-inside: avoid;
-            break-inside: avoid
+            break-inside: avoid*/
         }
 }
 
@@ -239,14 +239,6 @@ html {
     .layoutBoundary {
         padding: 0 10px;
         width: 100%
-    }
-}
-
-@media screen and (min-width:1025px),print {
-    .layoutBoundary {
-        padding: 0 20px;
-        min-width: 1200px;
-        max-width: 1200px
     }
 }
 
@@ -418,12 +410,6 @@ a {
     .main {
         padding: 40px 0;
         width: 100%
-    }
-}
-
-@media screen and (min-width:1025px),print {
-    .main {
-        padding: 60px 0
     }
 }
 
@@ -671,12 +657,6 @@ _:-webkit-full-screen:not(:root:root) {
     }
 }
 
-body {
-    background: url(../images/sg2global/page-image.jpg) center top no-repeat #250c05;
-    background-size: cover;
-    overflow-x: hidden;
-    background-size: 100% auto
-}
 
 .wood {
     background: url(../images/sg2global/wooden-board-bg.png) center top no-repeat
@@ -689,16 +669,6 @@ body {
         line-height: 155px;
         padding: 20px 15px;
         overflow: visible
-    }
-
-#main {
-    padding: 0 0 50px 0;
-    margin-left: 7px
-}
-
-    #main > div {
-        background: url(../images/sg2global/container-top.jpg) center top no-repeat,url(../images/sg2global/container-bottom.jpg) center bottom no-repeat,url(../images/sg2global/container-middle.jpg) center top repeat-y;
-        padding: 50px 20px
     }
 
 [id^=drop] {
