@@ -1,5 +1,5 @@
 var jsonData = {
-    "92019": {
+    "92019" : {
         "y": 2019,
         "m": 9,
         "som": "https://i.imgur.com/a5WdaJ3.jpg",
@@ -349,9 +349,9 @@ var jsonData = {
             }
         ]
     },
-    "102019": {
+    "102019" : {
         "y": 2019,
-        "m": 9,
+        "m": 10,
         "som": "https://i.imgur.com/a5WdaJ3.jpg",
         "tc": "824717",
         "ec": "EB8532",
@@ -696,9 +696,9 @@ var jsonData = {
             }
         ]
     },
-    "112019": {
+    "112019" : {
         "y": 2019,
-        "m": 9,
+        "m": 11,
         "som": "https://i.imgur.com/a5WdaJ3.jpg",
         "tc": "824717",
         "ec": "EB8532",
@@ -1051,4 +1051,4 @@ var jsonData = {
             }
         ]
     }
-};
+}
