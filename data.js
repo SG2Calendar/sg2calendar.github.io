@@ -322,7 +322,7 @@ var jsonData = {
                                 },
                                 {
                                     "d": 30,
-                                    "i": "https://i.imgur.com/OdS33oA.png",
+                                    "i": "https://i.imgur.com/inFoU7j.png",
                                     "g": "https://www.sg2global.com/forum/index.php?thread/689-event-halloween-2019/",
                                     "t": "All Day",
                                     "n": "Halloween",
@@ -330,7 +330,7 @@ var jsonData = {
                                 },
                                 {
                                     "d": 31,
-                                    "i": "https://i.imgur.com/OdS33oA.png",
+                                    "i": "https://i.imgur.com/inFoU7j.png",
                                     "g": "https://www.sg2global.com/forum/index.php?thread/689-event-halloween-2019/",
                                     "t": "All Day",
                                     "n": "Halloween",
