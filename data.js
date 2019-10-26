@@ -322,30 +322,19 @@ var jsonData = {
                                 },
                                 {
                                     "d": 30,
-                                    "i": "https://i.imgur.com/M015dld.png",
-                                    "g": "https://www.sg2global.com/forum/index.php?thread/365-event-dt-run/",
-                                    "t": "19:00",
-                                    "n": "DT Run",
-                                    "u": "https://i.imgur.com/l9rRJLi.jpg"
+                                    "i": "https://i.imgur.com/OdS33oA.png",
+                                    "g": "https://www.sg2global.com/forum/index.php?thread/689-event-halloween-2019/",
+                                    "t": "All Day",
+                                    "n": "Halloween",
+                                    "u": "https://i.imgur.com/cqM1Z1n.jpg"
                                 },
                                 {
-                                    "d": 31, "e": [
-                                        {
-                                            "i": "https://i.imgur.com/IllUyVq.png",
-                                            "g": "https://www.sg2global.com/forum/index.php?thread/321-event-ox-event/",
-                                            "t": "15:00",
-                                            "n": "OX Event",
-                                            "u": "https://i.imgur.com/Kc7IsVi.jpg",
-                                            "f": 0
-                                        },
-                                        {
-                                            "i": "https://i.imgur.com/IllUyVq.png",
-                                            "g": "https://www.sg2global.com/forum/index.php?thread/321-event-ox-event/",
-                                            "t": "19:00",
-                                            "n": "OX Event",
-                                            "u": "https://i.imgur.com/Kc7IsVi.jpg",
-                                            "f": 0
-                                        }]
+                                    "d": 31,
+                                    "i": "https://i.imgur.com/OdS33oA.png",
+                                    "g": "https://www.sg2global.com/forum/index.php?thread/689-event-halloween-2019/",
+                                    "t": "All Day",
+                                    "n": "Halloween",
+                                    "u": "https://i.imgur.com/cqM1Z1n.jpg"
                                 }
                             ]
     }
