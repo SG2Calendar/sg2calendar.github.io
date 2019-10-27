@@ -211,7 +211,11 @@ function sidebarEntry(day, som) {
     var li = document.createElement("li");
     li.className = "box24";
     var el = document.createElement("a");
-    el.href = day.g;
+    //el.href = day.g;
+    el.addEventListener("click", function () {
+        if (day.g !== "")
+            window.open(day.g, '_blank');
+    });
     li.appendChild(el);
     var el2 = document.createElement("img");
     el2.src = day.i;
