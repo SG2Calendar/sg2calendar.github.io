@@ -306,7 +306,7 @@ var jsonData = {
                                     "d": 28,
                                     "i": "https://i.imgur.com/dAm7jFf.png",
                                     "g": "https://www.sg2global.com/forum/index.php?thread/326-event-mining-party/",
-                                    "t": "19:00",
+                                    "t": "17:00",
                                     "n": "Mining Party",
                                     "u": "https://i.imgur.com/JOiieaI.jpg",
                                     "f": 0
@@ -315,7 +315,7 @@ var jsonData = {
                                     "d": 29,
                                     "i": "https://i.imgur.com/IllUyVq.png",
                                     "g": "https://www.sg2global.com/forum/index.php?thread/321-event-ox-event/",
-                                    "t": "19:00",
+                                    "t": "17:00",
                                     "n": "OX Event",
                                     "u": "https://i.imgur.com/Kc7IsVi.jpg",
                                     "f": 0
