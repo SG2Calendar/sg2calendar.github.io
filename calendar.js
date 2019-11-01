@@ -7,9 +7,9 @@ var loopInc = 0;
 var loaded = false;
 
 function CalendarInit() {
-    var data = jsonData[calendarDate.getMonth() + "" + calendarDate.getFullYear()];
+    var data = jsonData[/*calendarDate.getMonth()*/9 + "" + calendarDate.getFullYear()];
     if (data === undefined) {
-        previousMonth();
+        nextMonth();
         return;
     }
 
