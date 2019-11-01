@@ -184,7 +184,7 @@ function CreateDay(day, data) {
 }
 
 function CreateSidebarDay(day, som, sidebar) {
-    if (day.n === "")
+    if (day.n === "" || day.d === 0)
         return undefined;
     var li;
     if (day.e !== undefined) {
