@@ -8,7 +8,6 @@ var loaded = false;
 
 function CalendarInit() {
     var data = jsonData[calendarDate.getMonth() + "" + calendarDate.getFullYear()];
-    console.log(data);
     if (data === undefined) {
         nextMonth();
         return;
