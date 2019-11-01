@@ -228,7 +228,10 @@ function sidebarEntry(day, som) {
     el2 = document.createElement("h3");
     div.appendChild(el2);
     el = document.createElement("a");
-    el.href = day.g;
+    el.addEventListener("click", function () {
+        if (day.g !== "")
+            window.open(day.g, '_blank');
+    });
     el.innerHTML = day.n;
     el2.appendChild(el);
     el2 = document.createElement("small");
