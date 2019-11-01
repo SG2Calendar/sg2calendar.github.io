@@ -17,7 +17,8 @@
 #calendar {
     width: 100%;
     color: #000;
-    overflow: hidden
+    overflow: hidden;
+    padding-bottom: 5px
 }
 
     #calendar div {
@@ -135,7 +136,7 @@
         color: #fff;
         position: absolute;
         top: 17%;
-        left: 8%;
+        left: 10%;
         transform: translate(-50%,-37.5%);
         text-shadow: 1px 1px 0 #000,-1px 1px 0 #000,1px -1px 0 #000,-1px -1px 0 #000,0 1px 0 #000,0 -1px 0 #000,-1px 0 0 #000,1px 0 0 #000,2px 2px 0 #000,-2px 2px 0 #000,2px -2px 0 #000,-2px -2px 0 #000,0 2px 0 #000,0 -2px 0 #000,-2px 0 0 #000,2px 0 0 #000,1px 2px 0 #000,-1px 2px 0 #000,1px -2px 0 #000,-1px -2px 0 #000,2px 1px 0 #000,-2px 1px 0 #000,2px -1px 0 #000,-2px -1px 0 #000
     }
