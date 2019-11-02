@@ -64,7 +64,7 @@ function CalendarInit() {
                 for (i = day0Count; i < excess + day0Count; i++) {
                     day = nextData.days[i];
                     CreateSidebarDay(day, data.som, sidebar);
-                } 
+                }
             }
         }
     }
@@ -346,18 +346,24 @@ setInterval(function () {
             var index = loop % helper.e.length;
 
             helper.eventTime.innerHTML = helper.e[index].t;
-            helper.eventName.innerHTML = helper.e[index].n;
+            var n = helper.e[index].n;
+            helper.eventName.innerHTML = n;
+
+            if (n.length > 13) {
+                helper.eventName.className += " longText";
+            } else {
+                helper.eventName.classList.remove("longText");
+            }
 
             var oldImg = index - 1 < 0 ? helper.e[helper.e.length - 1].img : helper.e[index - 1].img;
             var newImg = helper.e[index].img;
 
-            if (oldImg.src !== newImg.src) {
-                oldImg.className = "hidden";
-                newImg.className = "";
-                var div = helper.div;
-                div.insertBefore(newImg, div.firstChild);
-                if (div.contains(oldImg))
-                    div.removeChild(oldImg);
+            oldImg.className = "hidden";
+            newImg.className = "";
+            var div = helper.div;
+            div.insertBefore(newImg, div.firstChild);
+            if (div.contains(oldImg)) {
+                div.removeChild(oldImg);
             }
         }
     }
