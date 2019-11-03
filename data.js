@@ -667,11 +667,11 @@ var jsonData = {
                     }]
             },
             {
-                "d": 0,
+                "d": 26,
                 "i": "./images/logo.png",
-                "g": null,
-                "t": null,
-                "n": null
+                "g": "https://www.sg2global.com/forum/index.php?thread/562-event-boss-spawn/",
+                "t": "17:00",
+                "n": "Boss Spawn"
             },
             {
                 "d": 30,
