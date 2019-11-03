@@ -667,7 +667,7 @@ var jsonData = {
                     }]
             },
             {
-                "d": 26,
+                "d": 29,
                 "i": "./images/logo.png",
                 "g": "https://www.sg2global.com/forum/index.php?thread/562-event-boss-spawn/",
                 "t": "17:00",
