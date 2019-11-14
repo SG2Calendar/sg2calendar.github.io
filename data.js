@@ -500,7 +500,7 @@ var jsonData = {
                     {
                         "i": "https://i.imgur.com/IllUyVq.png",
                         "g": "https://www.sg2global.com/forum/index.php?thread/321-event-ox-event/",
-                        "t": "17:00",
+                        "t": "15:00",
                         "n": "OX Event",
                         "u": "https://i.imgur.com/Kc7IsVi.jpg",
                         "f": 0
@@ -508,7 +508,7 @@ var jsonData = {
                     {
                         "i": "https://i.imgur.com/IllUyVq.png",
                         "g": "https://www.sg2global.com/forum/index.php?thread/321-event-ox-event/",
-                        "t": "21:00",
+                        "t": "17:00",
                         "n": "OX Event",
                         "u": "https://i.imgur.com/Kc7IsVi.jpg",
                         "f": 0
@@ -576,7 +576,7 @@ var jsonData = {
                     {
                         "i": "https://i.imgur.com/IllUyVq.png",
                         "g": "https://www.sg2global.com/forum/index.php?thread/321-event-ox-event/",
-                        "t": "17:00",
+                        "t": "15:00",
                         "n": "OX Event",
                         "u": "https://i.imgur.com/Kc7IsVi.jpg",
                         "f": 0
@@ -584,7 +584,7 @@ var jsonData = {
                     {
                         "i": "https://i.imgur.com/IllUyVq.png",
                         "g": "https://www.sg2global.com/forum/index.php?thread/321-event-ox-event/",
-                        "t": "21:00",
+                        "t": "17:00",
                         "n": "OX Event",
                         "u": "https://i.imgur.com/Kc7IsVi.jpg",
                         "f": 0
@@ -652,7 +652,7 @@ var jsonData = {
                     }, {
                         "i": "https://i.imgur.com/IllUyVq.png",
                         "g": "https://www.sg2global.com/forum/index.php?thread/321-event-ox-event/",
-                        "t": "17:00",
+                        "t": "15:00",
                         "n": "OX Event",
                         "u": "https://i.imgur.com/Kc7IsVi.jpg",
                         "f": 0
@@ -660,7 +660,7 @@ var jsonData = {
                     {
                         "i": "https://i.imgur.com/IllUyVq.png",
                         "g": "https://www.sg2global.com/forum/index.php?thread/321-event-ox-event/",
-                        "t": "21:00",
+                        "t": "17:00",
                         "n": "OX Event",
                         "u": "https://i.imgur.com/Kc7IsVi.jpg",
                         "f": 0
