@@ -523,6 +523,14 @@ var jsonData = {
             },
             {
                 "d": 16,
+                "i": "https://i.imgur.com/zGm6lA5.png",
+                "u": "https://i.imgur.com/9BgHnmP.jpg",
+                "g": "https://www.sg2global.com/forum/index.php?thread/367-event-moonlight-treasure-box/",
+                "t": "All Day",
+                "n": "Moonlight Box"
+            },
+            {
+                "d": 17,
                 "e": [{
                     "i": "https://i.imgur.com/SRFNp3n.png",
                     "g": "https://www.sg2global.com/forum/index.php?thread/638-fishing-extravaganza-16-10-2019/",
@@ -536,14 +544,6 @@ var jsonData = {
                     "n": "Mystery Box",
                     "u": "https://i.imgur.com/kB9HwLy.png"
                 }]
-            },
-            {
-                "d": 17,
-                "i": "https://i.imgur.com/5HTFviS.png",
-                "g": "https://www.sg2global.com/forum/index.php?thread/372-event-mistery-box/",
-                "t": "All Day",
-                "n": "Mystery Box",
-                "u": "https://i.imgur.com/kB9HwLy.png"
             },
             {
                 "d": 18,
@@ -564,11 +564,10 @@ var jsonData = {
             },
             {
                 "d": 20,
-                "i": "https://i.imgur.com/zGm6lA5.png",
-                "u": "https://i.imgur.com/9BgHnmP.jpg",
-                "g": "https://www.sg2global.com/forum/index.php?thread/367-event-moonlight-treasure-box/",
-                "t": "All Day",
-                "n": "Moonlight Box"
+                "i": "./images/logo.png",
+                "g": "https://www.sg2global.com/forum/index.php?thread/562-event-boss-spawn/",
+                "t": "17:00",
+                "n": "Boss Spawn"
             },
             {
                 "d": 21,
@@ -600,11 +599,11 @@ var jsonData = {
             },
             {
                 "d": 23,
-                "i": "https://i.imgur.com/nnJgE4E.png",
-                "g": "https://www.sg2global.com/forum/index.php?thread/551-event-hexagonal-box/",
+                "i": "https://i.imgur.com/zGm6lA5.png",
+                "u": "https://i.imgur.com/9BgHnmP.jpg",
+                "g": "https://www.sg2global.com/forum/index.php?thread/367-event-moonlight-treasure-box/",
                 "t": "All Day",
-                "n": "Hexagonal Box",
-                "u": "https://i.imgur.com/kgPPMkZ.jpg"
+                "n": "Moonlight Box"
             },
             {
                 "d": 24,
@@ -644,12 +643,6 @@ var jsonData = {
                 "d": 28,
                 "e": [
                     {
-                        "i": "https://i.imgur.com/zGm6lA5.png",
-                        "u": "https://i.imgur.com/9BgHnmP.jpg",
-                        "g": "https://www.sg2global.com/forum/index.php?thread/367-event-moonlight-treasure-box/",
-                        "t": "All Day",
-                        "n": "Moonlight Box"
-                    }, {
                         "i": "https://i.imgur.com/IllUyVq.png",
                         "g": "https://www.sg2global.com/forum/index.php?thread/321-event-ox-event/",
                         "t": "15:00",
@@ -682,11 +675,11 @@ var jsonData = {
                     "t": "17:00",
                     "n": "Budokan PvP"
                 }, {
-                    "i": "https://i.imgur.com/5HTFviS.png",
-                    "g": "https://www.sg2global.com/forum/index.php?thread/372-event-mistery-box/",
+                    "i": "https://i.imgur.com/zGm6lA5.png",
+                    "u": "https://i.imgur.com/9BgHnmP.jpg",
+                    "g": "https://www.sg2global.com/forum/index.php?thread/367-event-moonlight-treasure-box/",
                     "t": "All Day",
-                    "n": "Mystery Box",
-                    "u": "https://i.imgur.com/kB9HwLy.png"
+                    "n": "Moonlight Box"
                 }]
             }
         ]
