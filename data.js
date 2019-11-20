@@ -599,11 +599,20 @@ var jsonData = {
             },
             {
                 "d": 23,
-                "i": "https://i.imgur.com/zGm6lA5.png",
-                "u": "https://i.imgur.com/9BgHnmP.jpg",
-                "g": "https://www.sg2global.com/forum/index.php?thread/367-event-moonlight-treasure-box/",
-                "t": "All Day",
-                "n": "Moonlight Box"
+                "e": [
+                {
+                    "i": "https://i.imgur.com/zGm6lA5.png",
+                    "u": "https://i.imgur.com/9BgHnmP.jpg",
+                    "g": "https://www.sg2global.com/forum/index.php?thread/367-event-moonlight-treasure-box/",
+                    "t": "All Day",
+                    "n": "Moonlight Box"
+                },
+                {
+                    "i": "./images/logo.png",
+                    "g": "",
+                    "t": "17:00",
+                    "n": "Nation War"
+                }]
             },
             {
                 "d": 24,
