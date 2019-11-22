@@ -591,11 +591,12 @@ var jsonData = {
             },
             {
                 "d": 22,
-                "i": "https://i.imgur.com/CX7RHb8.png",
-                "g": "https://www.sg2global.com/forum/index.php?thread/553-event-community-event/",
+                "i": "https://i.imgur.com/dAm7jFf.png",
+                "g": "https://www.sg2global.com/forum/index.php?thread/326-event-mining-party/",
                 "t": "17:00",
-                "n": "Community Event",
-                "u": "https://i.imgur.com/myvtj8x.png"
+                "n": "Mining Party",
+                "u": "https://i.imgur.com/JOiieaI.jpg",
+                "f": 0
             },
             {
                 "d": 23,
@@ -624,12 +625,10 @@ var jsonData = {
             },
             {
                 "d": 25,
-                "i": "https://i.imgur.com/dAm7jFf.png",
-                "g": "https://www.sg2global.com/forum/index.php?thread/326-event-mining-party/",
+                "i": "./images/logo.png",
+                "g": "https://www.sg2global.com/forum/index.php?thread/562-event-boss-spawn/",
                 "t": "17:00",
-                "n": "Mining Party",
-                "u": "https://i.imgur.com/JOiieaI.jpg",
-                "f": 0
+                "n": "Boss Spawn"
             },
             {
                 "d": 26,
@@ -670,10 +669,11 @@ var jsonData = {
             },
             {
                 "d": 29,
-                "i": "./images/logo.png",
-                "g": "https://www.sg2global.com/forum/index.php?thread/562-event-boss-spawn/",
+                "i": "https://i.imgur.com/CX7RHb8.png",
+                "g": "https://www.sg2global.com/forum/index.php?thread/553-event-community-event/",
                 "t": "17:00",
-                "n": "Boss Spawn"
+                "n": "Community Event",
+                "u": "https://i.imgur.com/myvtj8x.png"
             },
             {
                 "d": 30,
