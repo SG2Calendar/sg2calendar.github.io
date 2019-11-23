@@ -118,19 +118,20 @@ function CreateDay(day, data) {
             div.dataset.index = dynamicDays.length;
             dynamicDays.push(helper);
             helper.div = div;
-            div.addEventListener("mouseenter", function (obj) {
-                hovering = true;
-                var dd = dynamicDays[obj.target.dataset.index];
-                document.getElementById("calendar-hero-img").src = dd.e[loopInc % dd.e.length].u;
-                title.className = "hidden";
-            });
+            if (day.u !== undefined) {
+                div.addEventListener("mouseenter", function (obj) {
+                    hovering = true;
+                    var dd = dynamicDays[obj.target.dataset.index];
+                    document.getElementById("calendar-hero-img").src = dd.e[loopInc % dd.e.length].u;
+                    title.className = "hidden";
+                });
 
-            div.addEventListener("mouseleave", function () {
-                hovering = false;
-                document.getElementById("calendar-hero-img").src = data.som;
-                title.className = "";
-            });
-
+                div.addEventListener("mouseleave", function () {
+                    hovering = false;
+                    document.getElementById("calendar-hero-img").src = data.som;
+                    title.className = "";
+                });
+            }
             div.addEventListener("click", function (obj) {
                 var dd = dynamicDays[obj.target.closest("div").dataset.index];
                 window.open(dd.e[loopInc % dd.e.length].g, '_blank');
