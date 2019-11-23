@@ -677,19 +677,11 @@ var jsonData = {
             },
             {
                 "d": 30,
-                "e": [{
-                    "i": "https://i.imgur.com/LmwH11a.png",
-                    "u": "https://i.imgur.com/AilHpWj.jpg",
-                    "g": "https://www.sg2global.com/forum/index.php?thread/549-event-budokan-pvp-event/",
-                    "t": "17:00",
-                    "n": "Budokan PvP"
-                }, {
-                    "i": "https://i.imgur.com/zGm6lA5.png",
-                    "u": "https://i.imgur.com/9BgHnmP.jpg",
-                    "g": "https://www.sg2global.com/forum/index.php?thread/367-event-moonlight-treasure-box/",
-                    "t": "All Day",
-                    "n": "Moonlight Box"
-                }]
+                "i": "https://i.imgur.com/zGm6lA5.png",
+                "u": "https://i.imgur.com/9BgHnmP.jpg",
+                "g": "https://www.sg2global.com/forum/index.php?thread/367-event-moonlight-treasure-box/",
+                "t": "All Day",
+                "n": "Moonlight Box"
             }
         ]
     }
