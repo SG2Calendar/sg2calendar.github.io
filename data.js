@@ -688,7 +688,7 @@ var jsonData = {
     "112019": {
         "y": 2019,
         "m": 11,
-        "som": "https://i.imgur.com/Q45bywt.jpg",
+        "som": "https://i.imgur.com/Jp35Whq.jpg",
         "tc": "BB2528",
         "ec": "F8B229",
         "days": [
