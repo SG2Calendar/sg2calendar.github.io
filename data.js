@@ -825,7 +825,7 @@ var jsonData = {
                 "d": 13,
                 "i": "./images/logo.png",
                 "g": "https://www.sg2global.com/forum/index.php?thread/562-event-boss-spawn/",
-                "t": "20:00",
+                "t": "17:00",
                 "n": "Boss Spawn"
             },
             {
@@ -970,7 +970,7 @@ var jsonData = {
                 "d": 27,
                 "i": "./images/logo.png",
                 "g": "https://www.sg2global.com/forum/index.php?thread/562-event-boss-spawn/",
-                "t": "20:00",
+                "t": "17:00",
                 "n": "Boss Spawn"
             },
             {
