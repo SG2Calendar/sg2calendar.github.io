@@ -860,23 +860,12 @@ var jsonData = {
             },
             {
                 "d": 19,
-                "e": [
-                    {
                         "i": "https://i.imgur.com/IllUyVq.png",
                         "g": "https://www.sg2global.com/forum/index.php?thread/321-event-ox-event/",
                         "t": "15:00",
                         "n": "OX Event",
                         "u": "https://i.imgur.com/Kc7IsVi.jpg",
                         "f": 0
-                    },
-                    {
-                        "i": "https://i.imgur.com/IllUyVq.png",
-                        "g": "https://www.sg2global.com/forum/index.php?thread/321-event-ox-event/",
-                        "t": "17:00",
-                        "n": "OX Event",
-                        "u": "https://i.imgur.com/Kc7IsVi.jpg",
-                        "f": 0
-                    }]
             },
             {
                 "d": 20,
@@ -937,23 +926,12 @@ var jsonData = {
             },
             {
                 "d": 26,
-                "e": [
-                    {
                         "i": "https://i.imgur.com/IllUyVq.png",
                         "g": "https://www.sg2global.com/forum/index.php?thread/321-event-ox-event/",
                         "t": "15:00",
                         "n": "OX Event",
                         "u": "https://i.imgur.com/Kc7IsVi.jpg",
                         "f": 0
-                    },
-                    {
-                        "i": "https://i.imgur.com/IllUyVq.png",
-                        "g": "https://www.sg2global.com/forum/index.php?thread/321-event-ox-event/",
-                        "t": "17:00",
-                        "n": "OX Event",
-                        "u": "https://i.imgur.com/Kc7IsVi.jpg",
-                        "f": 0
-                    }]
             },
             {
                 "d": 27,
