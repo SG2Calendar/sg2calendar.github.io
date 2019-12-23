@@ -236,7 +236,8 @@ function sidebarEntry(day, som) {
     el2.appendChild(el);
     el2 = document.createElement("small");
     div.appendChild(el2);
-    el2.innerHTML = day.d + " " + monthNames[calendarDate.getMonth()] + " - ";
+    el2.innerHTML = day.t !== "" ? day.d + " " + monthNames[calendarDate.getMonth()] + " - " : day.d + " " + monthNames[calendarDate.getMonth()];
+
     if (day.t === "" || day.t === "All Day")
         el2.innerHTML += day.t;
     else

@@ -900,78 +900,75 @@ var jsonData = {
             },
             {
                 "d": 23,
-                "i": "https://i.imgur.com/dAm7jFf.png",
-                "g": "https://www.sg2global.com/forum/index.php?thread/326-event-mining-party/",
-                "t": "17:00",
-                "n": "Mining Party",
-                "u": "https://i.imgur.com/JOiieaI.jpg",
-                "f": 0
+                "i": "https://i.imgur.com/LnvvQrO.png",
+                "g": "https://www.sg2global.com/forum/index.php?thread/928-christmas-event-2019/&postID=7111#post7111",
+                "t": "",
+                "n": "Christmas",
+                "u": "https://i.imgur.com/o62BkZM.png"
             },
             {
                 "d": 24,
-                "i": "https://i.imgur.com/IllUyVq.png",
-                "g": "https://www.sg2global.com/forum/index.php?thread/321-event-ox-event/",
-                "t": "17:00",
-                "n": "OX Event",
-                "u": "https://i.imgur.com/Kc7IsVi.jpg",
-                "f": 0
+                "i": "https://i.imgur.com/LnvvQrO.png",
+                "g": "https://www.sg2global.com/forum/index.php?thread/928-christmas-event-2019/&postID=7111#post7111",
+                "t": "",
+                "n": "Christmas",
+                "u": "https://i.imgur.com/o62BkZM.png"
             },
             {
                 "d": 25,
-                "i": "https://i.imgur.com/M015dld.png",
-                "g": "https://www.sg2global.com/forum/index.php?thread/365-event-dt-run/",
-                "t": "17:00",
-                "n": "DT Run",
-                "u": "https://i.imgur.com/l9rRJLi.jpg"
+                "i": "https://i.imgur.com/LnvvQrO.png",
+                "g": "https://www.sg2global.com/forum/index.php?thread/928-christmas-event-2019/&postID=7111#post7111",
+                "t": "",
+                "n": "Christmas",
+                "u": "https://i.imgur.com/o62BkZM.png"
             },
             {
                 "d": 26,
-                        "i": "https://i.imgur.com/IllUyVq.png",
-                        "g": "https://www.sg2global.com/forum/index.php?thread/321-event-ox-event/",
-                        "t": "17:00",
-                        "n": "OX Event",
-                        "u": "https://i.imgur.com/Kc7IsVi.jpg",
-                        "f": 0
+                "i": "https://i.imgur.com/LnvvQrO.png",
+                "g": "https://www.sg2global.com/forum/index.php?thread/928-christmas-event-2019/&postID=7111#post7111",
+                "t": "",
+                "n": "Christmas",
+                "u": "https://i.imgur.com/o62BkZM.png"
             },
             {
                 "d": 27,
-                "i": "./images/logo.png",
-                "g": "https://www.sg2global.com/forum/index.php?thread/562-event-boss-spawn/",
-                "t": "17:00",
-                "n": "Boss Spawn"
+                "i": "https://i.imgur.com/LnvvQrO.png",
+                "g": "https://www.sg2global.com/forum/index.php?thread/928-christmas-event-2019/&postID=7111#post7111",
+                "t": "",
+                "n": "Christmas",
+                "u": "https://i.imgur.com/o62BkZM.png"
             },
             {
                 "d": 28,
-                "i": "https://i.imgur.com/zGm6lA5.png",
-                "u": "https://i.imgur.com/9BgHnmP.jpg",
-                "g": "https://www.sg2global.com/forum/index.php?thread/367-event-moonlight-treasure-box/",
-                "t": "All Day",
-                "n": "Moonlight Box"
+                "i": "https://i.imgur.com/LnvvQrO.png",
+                "g": "https://www.sg2global.com/forum/index.php?thread/928-christmas-event-2019/&postID=7111#post7111",
+                "t": "",
+                "n": "Christmas",
+                "u": "https://i.imgur.com/o62BkZM.png"
             },
             {
                 "d": 29,
-                "i": "https://i.imgur.com/5HTFviS.png",
-                "g": "https://www.sg2global.com/forum/index.php?thread/372-event-mistery-box/",
-                "t": "All Day",
-                "n": "Mystery Box",
-                "u": "https://i.imgur.com/kB9HwLy.png"
+                "i": "https://i.imgur.com/LnvvQrO.png",
+                "g": "https://www.sg2global.com/forum/index.php?thread/928-christmas-event-2019/&postID=7111#post7111",
+                "t": "",
+                "n": "Christmas",
+                "u": "https://i.imgur.com/o62BkZM.png"
             },
             {
                 "d": 30,
-                "i": "https://i.imgur.com/M015dld.png",
-                "g": "https://www.sg2global.com/forum/index.php?thread/365-event-dt-run/",
-                "t": "17:00",
-                "n": "DT Run",
-                "u": "https://i.imgur.com/l9rRJLi.jpg"
+                "i": "https://i.imgur.com/LnvvQrO.png",
+                "g": "https://www.sg2global.com/forum/index.php?thread/928-christmas-event-2019/&postID=7111#post7111",
+                "t": "",
+                "n": "Christmas",
+                "u": "https://i.imgur.com/o62BkZM.png"
             },
             {
                 "d": 31,
-                "i": "https://i.imgur.com/IllUyVq.png",
-                "g": "https://www.sg2global.com/forum/index.php?thread/321-event-ox-event/",
-                "t": "17:00",
-                "n": "OX Event",
-                "u": "https://i.imgur.com/Kc7IsVi.jpg",
-                "f": 0
+                "i": "https://i.imgur.com/LnvvQrO.png",
+                "g": "https://www.sg2global.com/forum/index.php?thread/928-christmas-event-2019/&postID=7111#post7111",
+                "t": "",
+                "n": "Christmas",
+                "u": "https://i.imgur.com/o62BkZM.png"
             }
         ]
     }
