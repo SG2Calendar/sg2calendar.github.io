@@ -1011,7 +1011,7 @@ var jsonData = {
                 "d": 2,
                 "i": "https://i.imgur.com/IllUyVq.png",
                 "g": "https://www.sg2global.com/forum/index.php?thread/321-event-ox-event/",
-                "t": "17:00",
+                "t": "20:00",
                 "n": "OX Event",
                 "u": "https://i.imgur.com/Kc7IsVi.jpg",
                 "f": 0
