@@ -1085,9 +1085,9 @@ var jsonData = {
             {
                 "d": 10,
                 "i": "./images/logo.png",
-                "g": "https://www.sg2global.com/forum/index.php?thread/562-event-boss-spawn/",
+                "g": "",
                 "t": "17:00",
-                "n": "Boss Spawn"
+                "n": "Hunter Hour"
             },
             {
                 "d": 11,
@@ -1114,11 +1114,10 @@ var jsonData = {
             },
             {
                 "d": 13,
-                "i": "https://i.imgur.com/M015dld.png",
-                "g": "https://www.sg2global.com/forum/index.php?thread/365-event-dt-run/",
+                "i": "./images/logo.png",
+                "g": "https://www.sg2global.com/forum/index.php?thread/562-event-boss-spawn/",
                 "t": "17:00",
-                "n": "DT Run",
-                "u": "https://i.imgur.com/l9rRJLi.jpg"
+                "n": "Boss Spawn"
             },
             {
                 "d": 14,
