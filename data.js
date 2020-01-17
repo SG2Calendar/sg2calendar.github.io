@@ -1147,11 +1147,10 @@ var jsonData = {
             },
             {
                 "d": 17,
-                "i": "https://i.imgur.com/CX7RHb8.png",
-                "g": "https://www.sg2global.com/forum/index.php?thread/553-event-community-event/",
+                "i": "./images/logo.png",
+                "g": "",
                 "t": "17:00",
-                "n": "Community Event",
-                "u": "https://i.imgur.com/myvtj8x.png"
+                "n": "Hunter Hour"
             },
             {
                 "d": 18,
