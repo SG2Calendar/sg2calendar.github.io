@@ -1244,7 +1244,7 @@ var jsonData = {
                 "d": 27,
                 "i": "https://i.imgur.com/M015dld.png",
                 "g": "https://www.sg2global.com/forum/index.php?thread/365-event-dt-run/",
-                "t": "19:00",
+                "t": "17:00",
                 "n": "DT Run",
                 "u": "https://i.imgur.com/l9rRJLi.jpg"
             },
@@ -1278,7 +1278,7 @@ var jsonData = {
                 "d": 31,
                 "i": "https://i.imgur.com/M015dld.png",
                 "g": "https://www.sg2global.com/forum/index.php?thread/365-event-dt-run/",
-                "t": "19:00",
+                "t": "17:00",
                 "n": "DT Run",
                 "u": "https://i.imgur.com/l9rRJLi.jpg"
             }
