@@ -1289,9 +1289,9 @@ var jsonData = {
     "12020": {
         "y": 2020,
         "m": 0,
-        "som": "https://i.imgur.com/Jp35Whq.jpg",
-        "tc": "BB2528",
-        "ec": "F8B229",
+        "som": "https://i.imgur.com/FU7D4JB.png",
+        "tc": "9f2240",
+        "ec": "c72b50",
         "days": [
             {
                 "d": 0,
@@ -1462,56 +1462,42 @@ var jsonData = {
                 "i": "./images/logo.png",
                 "g": "",
                 "t": "17:00",
-                "n": "Hunter Hour"
+                "n": "Hunter's Hour"
             },
             {
                 "d": 15,
-                "i": "https://i.imgur.com/zGm6lA5.png",
-                "u": "https://i.imgur.com/9BgHnmP.jpg",
-                "g": "https://www.sg2global.com/forum/index.php?thread/367-event-moonlight-treasure-box/",
+                "i": "https://i.imgur.com/8x1bE2C.png",
+                "g": "https://www.sg2global.com/forum/index.php?thread/1015-st-valentine-s-event-2020/",
                 "t": "All Day",
-                "n": "Moonlight Box"
+                "n": "St. Valentine's"
             },
             {
                 "d": 16,
-                "e": [{
-                    "i": "https://i.imgur.com/nnJgE4E.png",
-                    "g": "https://www.sg2global.com/forum/index.php?thread/551-event-hexagonal-box/",
-                    "t": "All Day",
-                    "n": "Hexagonal Box",
-                    "u": "https://i.imgur.com/kgPPMkZ.jpg"
-                }, {
-                    "i": "./images/logo.png",
-                    "g": "",
-                    "t": "17:00",
-                    "n": "Siege War"
-                }]
+                "i": "https://i.imgur.com/8x1bE2C.png",
+                "g": "https://www.sg2global.com/forum/index.php?thread/1015-st-valentine-s-event-2020/",
+                "t": "All Day",
+                "n": "St. Valentine's"
             },
             {
                 "d": 17,
-                "i": "https://i.imgur.com/dAm7jFf.png",
-                "g": "https://www.sg2global.com/forum/index.php?thread/326-event-mining-party/",
-                "t": "17:00",
-                "n": "Mining Party",
-                "u": "https://i.imgur.com/JOiieaI.jpg",
-                "f": 0
+                "i": "https://i.imgur.com/8x1bE2C.png",
+                "g": "https://www.sg2global.com/forum/index.php?thread/1015-st-valentine-s-event-2020/",
+                "t": "All Day",
+                "n": "St. Valentine's"
             },
             {
                 "d": 18,
-                "i": "https://i.imgur.com/IllUyVq.png",
-                "g": "https://www.sg2global.com/forum/index.php?thread/321-event-ox-event/",
-                "t": "17:00",
-                "n": "OX Event",
-                "u": "https://i.imgur.com/Kc7IsVi.jpg",
-                "f": 0
+                "i": "https://i.imgur.com/8x1bE2C.png",
+                "g": "https://www.sg2global.com/forum/index.php?thread/1015-st-valentine-s-event-2020/",
+                "t": "All Day",
+                "n": "St. Valentine's"
             },
             {
                 "d": 19,
-                "i": "https://i.imgur.com/M015dld.png",
-                "g": "https://www.sg2global.com/forum/index.php?thread/365-event-dt-run/",
-                "t": "17:00",
-                "n": "DT Run",
-                "u": "https://i.imgur.com/l9rRJLi.jpg"
+                "i": "https://i.imgur.com/8x1bE2C.png",
+                "g": "https://www.sg2global.com/forum/index.php?thread/1015-st-valentine-s-event-2020/",
+                "t": "All Day",
+                "n": "St. Valentine's"
             },
             {
                 "d": 20,
