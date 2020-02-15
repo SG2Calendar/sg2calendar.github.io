@@ -1501,12 +1501,10 @@ var jsonData = {
             },
             {
                 "d": 20,
-                "i": "https://i.imgur.com/IllUyVq.png",
-                "g": "https://www.sg2global.com/forum/index.php?thread/321-event-ox-event/",
-                "t": "17:00",
-                "n": "OX Event",
-                "u": "https://i.imgur.com/Kc7IsVi.jpg",
-                "f": 0
+                "i": "https://i.imgur.com/8x1bE2C.png",
+                "g": "https://www.sg2global.com/forum/index.php?thread/1015-st-valentine-s-event-2020/",
+                "t": "All Day",
+                "n": "St. Valentine's"
             },
             {
                 "d": 21,
