@@ -1776,9 +1776,8 @@ var jsonData = {
             {
                 "d": 20,
                 "i": "./images/logo.png",
-                "g": "https://www.sg2global.com/forum/index.php?thread/562-event-boss-spawn/",
                 "t": "17:00",
-                "n": "Boss Spawn"
+                "n": "Hunter's Hour"
             },
             {
                 "d": 21,
