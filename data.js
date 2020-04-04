@@ -1,4 +1,4 @@
-var jsonData = {
+    var jsonData = {
     "92019": {
         "y": 2019,
         "m": 9,
@@ -1916,8 +1916,9 @@ var jsonData = {
             },
             {
                 "d": 1,
-                "i": "./images/logo.png",
+                 "i": "https://i.imgur.com/4yq9cop.png",
                 "t": "17:00",
+                "u": "https://i.imgur.com/Kn9NImO.png",
                 "n": "Boss Spawn"
             },
             {
@@ -2030,8 +2031,9 @@ var jsonData = {
             },
             {
                 "d": 15,
-                "i": "./images/logo.png",
+                 "i": "https://i.imgur.com/4yq9cop.png",
                 "t": "17:00",
+                "u": "https://i.imgur.com/Kn9NImO.png",
                 "n": "Boss Spawn"
             },
             {
@@ -2145,8 +2147,9 @@ var jsonData = {
             },
             {
                 "d": 29,
-                "i": "./images/logo.png",
+                 "i": "https://i.imgur.com/4yq9cop.png",
                 "t": "17:00",
+                "u": "https://i.imgur.com/Kn9NImO.png",
                 "n": "Boss Spawn"
             },
             {
