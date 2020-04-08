@@ -1,4 +1,4 @@
-    var jsonData = {
+var jsonData = {
     "92019": {
         "y": 2019,
         "m": 9,
@@ -1916,9 +1916,8 @@
             },
             {
                 "d": 1,
-                 "i": "https://i.imgur.com/CQMpPqr.png",
+                "i": "./images/logo.png",
                 "t": "17:00",
-                "u": "https://i.imgur.com/UzL4RIf.jpg",
                 "n": "Boss Spawn"
             },
             {
@@ -1932,7 +1931,7 @@
             {
                 "d": 3,
                 "i": "https://i.imgur.com/M015dld.png",
-                "t": "20:00",
+                "t": "17:00",
                 "n": "DT Run",
                 "u": "https://i.imgur.com/l9rRJLi.jpg"
             },
@@ -1988,52 +1987,48 @@
             },
             {
                 "d": 10,
-                "i": "./images/logo.png",
-                "t": "17:00",
-                "n": "Gold Fever"
+                "i": "https://i.imgur.com/99dMYlP.png",
+                "t": "All Day",
+                "n": "Easter",
+                "u": "https://i.imgur.com/PYZcgCk.jpg",
+                "g":"https://www.sg2global.com/forum/index.php?thread/1043-event-easter-event-2020/"
             },
             {
                 "d": 11,
-                "i": "https://i.imgur.com/zGm6lA5.png",
-                "u": "https://i.imgur.com/9BgHnmP.jpg",
+                "i": "https://i.imgur.com/99dMYlP.png",
                 "t": "All Day",
-                "n": "Moonlight Box"
+                "n": "Easter",
+                "u": "https://i.imgur.com/PYZcgCk.jpg",
+                "g":"https://www.sg2global.com/forum/index.php?thread/1043-event-easter-event-2020/"
             },
             {
                 "d": 12,
-                "e": [{
-                    "i": "https://i.imgur.com/nnJgE4E.png",
-                    "t": "All Day",
-                    "n": "Hexagonal Box",
-                    "u": "https://i.imgur.com/kgPPMkZ.jpg"
-                }, {
-                    "i": "./images/logo.png",
-                    "g": "",
-                    "t": "17:00",
-                    "n": "Nation War"
-                }]
+                "i": "https://i.imgur.com/99dMYlP.png",
+                "t": "All Day",
+                "n": "Easter",
+                "u": "https://i.imgur.com/PYZcgCk.jpg",
+                "g":"https://www.sg2global.com/forum/index.php?thread/1043-event-easter-event-2020/"
             },
             {
                 "d": 13,
-                "i": "https://i.imgur.com/dAm7jFf.png",
-                "t": "17:00",
-                "n": "Vein Spawn",
-                "u": "https://i.imgur.com/JOiieaI.jpg",
-                "f": 0
+                "i": "https://i.imgur.com/99dMYlP.png",
+                "t": "All Day",
+                "n": "Easter",
+                "u": "https://i.imgur.com/PYZcgCk.jpg",
+                "g":"https://www.sg2global.com/forum/index.php?thread/1043-event-easter-event-2020/"
             },
             {
                 "d": 14,
-                "i": "https://i.imgur.com/IllUyVq.png",
-                "t": "17:00",
-                "n": "OX Event",
-                "u": "https://i.imgur.com/Kc7IsVi.jpg",
-                "f": 0
+                "i": "https://i.imgur.com/99dMYlP.png",
+                "t": "All Day",
+                "n": "Easter",
+                "u": "https://i.imgur.com/PYZcgCk.jpg",
+                "g":"https://www.sg2global.com/forum/index.php?thread/1043-event-easter-event-2020/"
             },
             {
                 "d": 15,
-                 "i": "https://i.imgur.com/CQMpPqr.png",
+                "i": "./images/logo.png",
                 "t": "17:00",
-                "u": "https://i.imgur.com/UzL4RIf.jpg",
                 "n": "Boss Spawn"
             },
             {
@@ -2147,9 +2142,8 @@
             },
             {
                 "d": 29,
-                 "i": "https://i.imgur.com/CQMpPqr.png",
+                "i": "./images/logo.png",
                 "t": "17:00",
-                "u": "https://i.imgur.com/UzL4RIf.jpg",
                 "n": "Boss Spawn"
             },
             {
@@ -2164,3 +2158,4 @@
         ]
     }
 }
+        
