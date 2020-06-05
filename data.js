@@ -354,7 +354,7 @@ var jsonData = {
                 "d": 5,
                 "i": "./images/logo.png",
                 "t": "17:00",
-                "n": "Gold Fever"
+                "n": "Hunter Hour"
             },
             {
                 "d": 6,
@@ -472,7 +472,7 @@ var jsonData = {
                 "d": 19,
                 "i": "./images/logo.png",
                 "t": "17:00",
-                "n": "Hunter Hour"
+                "n": "Gold Fever"
             },
             {
                 "d": 20,
